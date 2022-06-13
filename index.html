@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<title>All Right Development & Investment</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220614011737">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__wrapper">
+					<a class="header__logo" href="index.html"><img src="img/svg/logo_header.svg" alt="logo"></a>
+					<div class="header__content">
+						<div class="header__menu menu">
+							<nav class="menu__body">
+								<ul class="menu__list">
+									<li class="menu__item"><a class="menu__link" href="index.html">Головна</a></li>
+									<li class="menu__item"><a class="menu__link" href="#" data-goto-header data-goto-top="30" data-goto-speed="1200" data-goto=".about">Хто ми</a></li>
+									<li class="menu__item"><a class="menu__link" href="#" data-goto-header data-goto-top="30" data-goto-speed="1200" data-goto=".team">Засновники</a></li>
+									<li class="menu__item"><a class="menu__link" href="#" data-goto-header data-goto-top="30" data-goto-speed="1200" data-goto=".projects">Проекти</a></li>
+									<li class="menu__item"><a class="menu__link" href="services.html">Послуги</a></li>
+									<li class="menu__item"><a class="menu__link" href="partners&reviews.html">Партнери &
+											відгуки</a></li>
+									<li class="menu__item"><a class="menu__link" href="blog.html">ЗМІ про нас</a></li>
+									<li class="menu__item"><a class="menu__link" href="#" data-goto-header data-goto-top="30" data-goto-speed="1200" data-goto=".footer">Контакти</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="header__social social">
+							<a class="social__link" href="https://www.facebook.com/AllRight.development.investment/" target="_blank"><svg width="24" height="24" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.0117 13.5015L12.6783 9.15803H8.51064V6.33943C8.51064 5.15115 9.09282 3.99287 10.9594 3.99287H12.8541V0.294902C12.8541 0.294902 11.1347 0.00146484 9.49079 0.00146484C6.0586 0.00146484 3.81516 2.08178 3.81516 5.84771V9.15803H0V13.5015H3.81516V24.0015H8.51064V13.5015H12.0117Z" fill="black" />
+								</svg></a>
+							<a class="social__link" href="https://www.instagram.com/allright.development/?hl=en" target="_blank"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11.3622 5.61562C8.38095 5.61562 5.97626 8.02031 5.97626 11.0016C5.97626 13.9828 8.38095 16.3875 11.3622 16.3875C14.3434 16.3875 16.7481 13.9828 16.7481 11.0016C16.7481 8.02031 14.3434 5.61562 11.3622 5.61562ZM11.3622 14.5031C9.43564 14.5031 7.86064 12.9328 7.86064 11.0016C7.86064 9.07031 9.43095 7.5 11.3622 7.5C13.2934 7.5 14.8638 9.07031 14.8638 11.0016C14.8638 12.9328 13.2888 14.5031 11.3622 14.5031V14.5031ZM18.2247 5.39531C18.2247 6.09375 17.6622 6.65156 16.9684 6.65156C16.27 6.65156 15.7122 6.08906 15.7122 5.39531C15.7122 4.70156 16.2747 4.13906 16.9684 4.13906C17.6622 4.13906 18.2247 4.70156 18.2247 5.39531ZM21.7919 6.67031C21.7122 4.9875 21.3278 3.49687 20.095 2.26875C18.8669 1.04062 17.3763 0.65625 15.6934 0.571875C13.9591 0.473438 8.76064 0.473438 7.02626 0.571875C5.34814 0.651562 3.85752 1.03594 2.62471 2.26406C1.39189 3.49219 1.01221 4.98281 0.927832 6.66562C0.829395 8.4 0.829395 13.5984 0.927832 15.3328C1.00752 17.0156 1.39189 18.5062 2.62471 19.7344C3.85752 20.9625 5.34345 21.3469 7.02626 21.4312C8.76064 21.5297 13.9591 21.5297 15.6934 21.4312C17.3763 21.3516 18.8669 20.9672 20.095 19.7344C21.3231 18.5062 21.7075 17.0156 21.7919 15.3328C21.8903 13.5984 21.8903 8.40468 21.7919 6.67031V6.67031ZM19.5513 17.1937C19.1856 18.1125 18.4778 18.8203 17.5544 19.1906C16.1716 19.7391 12.8903 19.6125 11.3622 19.6125C9.83407 19.6125 6.54814 19.7344 5.17002 19.1906C4.25127 18.825 3.54345 18.1172 3.17314 17.1937C2.62471 15.8109 2.75127 12.5297 2.75127 11.0016C2.75127 9.47343 2.62939 6.1875 3.17314 4.80937C3.53877 3.89062 4.24658 3.18281 5.17002 2.8125C6.55283 2.26406 9.83407 2.39062 11.3622 2.39062C12.8903 2.39062 16.1763 2.26875 17.5544 2.8125C18.4731 3.17812 19.1809 3.88594 19.5513 4.80937C20.0997 6.19218 19.9731 9.47343 19.9731 11.0016C19.9731 12.5297 20.0997 15.8156 19.5513 17.1937Z" fill="black" />
+								</svg>
+							</a>
+							<a class="social__link" href="https://www.linkedin.com/company/ardi-group-com/" target="_blank"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M5.57562 21.5015H1.22188V7.48117H5.57562V21.5015ZM3.39641 5.56867C2.00422 5.56867 0.875 4.41554 0.875 3.02336C0.875 2.35464 1.14065 1.71331 1.6135 1.24046C2.08636 0.7676 2.72769 0.501953 3.39641 0.501953C4.06512 0.501953 4.70645 0.7676 5.17931 1.24046C5.65216 1.71331 5.91781 2.35464 5.91781 3.02336C5.91781 4.41554 4.78813 5.56867 3.39641 5.56867ZM21.8703 21.5015H17.5259V14.6765C17.5259 13.0499 17.4931 10.964 15.2623 10.964C12.9987 10.964 12.6519 12.7312 12.6519 14.5593V21.5015H8.30281V7.48117H12.4784V9.39367H12.5394C13.1206 8.29211 14.5405 7.12961 16.6588 7.12961C21.065 7.12961 21.875 10.0312 21.875 13.7999V21.5015H21.8703Z" fill="black" />
+								</svg>
+							</a>
+						</div>
+						<button type="button" class="icon-menu"><span></span></button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="section hero" data-watch="navigator">
+				<div class="hero__container">
+					<div class="hero__wrapper">
+						<div class="hero__content hero-content">
+							<h1 class="hero-content__title">All Right Development & Investment</h1>
+							<div class="hero-content__text">девелопер дохідної нерухомості</div>
+						</div>
+						<div class="hero__slider hero-slider swiper">
+							<div class="hero-slider__wrapper swiper-wrapper">
+								<div class="hero-slider__slide swiper-slide">
+									<div class="hero-slider__img -ibg" data-swiper-parallax="50%">
+										<picture><source srcset="img/hero-slider/slide-1.webp" type="image/webp"><img src="img/hero-slider/slide-1.jpg" alt="slide 1"></picture>
+									</div>
+								</div>
+								<div class="hero-slider__slide swiper-slide">
+									<div class="hero-slider__img -ibg" data-swiper-parallax="50%">
+										<picture><source srcset="img/hero-slider/slide-2.webp" type="image/webp"><img src="img/hero-slider/slide-2.jpg" alt="slide 2"></picture>
+									</div>
+								</div>
+								<div class="hero-slider__slide swiper-slide">
+									<div class="hero-slider__img -ibg" data-swiper-parallax="50%">
+										<picture><source srcset="img/hero-slider/slide-3.webp" type="image/webp"><img src="img/hero-slider/slide-3.jpg" alt="slide 3"></picture>
+									</div>
+								</div>
+								<div class="hero-slider__slide swiper-slide">
+									<div class="hero-slider__img -ibg" data-swiper-parallax="50%">
+										<picture><source srcset="img/hero-slider/slide-4.webp" type="image/webp"><img src="img/hero-slider/slide-4.jpg" alt="slide 4"></picture>
+									</div>
+								</div>
+							</div>
+							<div class="hero-slider__controls hero-controls">
+								<div class="hero-controls__arrows swiper-arrows">
+									<button class="swiper-arrows__btn swiper-arrows__btn_prev _icon-arrow-left" type="button"></button>
+									<button class="swiper-arrows__btn swiper-arrows__btn_next _icon-arrow-right" type="button"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section about" data-watch="navigator">
+				<div class="about__container">
+					<div class="about__title title">
+						<div class="title__text">Хто ми</div>
+					</div>
+					<div class="about__body">
+						<div class="about__img">
+							<img src="img/svg/logo.svg" alt="main logo">
+						</div>
+						<div class="about__content about-content">
+							<p>All Right Development & Investment –
+								міжнародна інвестиційно-девелоперська компанія повного циклу, яка займається
+								девелопментом дохідної нерухомості:</p>
+							<ul class="list">
+								<li class="list__item">Створення найкращих концептів та будівництво дохідних об’єктів
+									нерухомості.</li>
+								<li class="list__item">Ревіталізація об'єктів нерухомості з метою збільшення
+									інвестиційної дохідності.</li>
+								<li class="list__item">Залучення інвестицій в найприбутковіші об'єкти нерухомості.</li>
+								<li class="list__item">Експертиза і підвищення інвестиційної дохідності.</li>
+								<li class="list__item">Управлінням об’єктами нерухомості.</li>
+							</ul>
+							<p>Філософія All Right Development & Investment полягає у
+								створенні інвестиційно привабливих об’єктів нерухомості, корисних
+								для суспільства та які забезпечують інвесторам мінімум на 30% більшу прибутковість, ніж
+								в середньому по ринку.</p>
+							<div class="about-content__spollers spollers" data-spollers>
+								<div class="spollers__item">
+									<button class="spollers__title _icon-caret-down" type="button" data-spoller>
+										Завдяки чому вдається збільшити інвестиційну дохідність?
+									</button>
+									<div class="spollers__body">
+										<ul class="list">
+											<li class="list__item">Поглиблений аналіз та експертиза ринку.</li>
+											<li class="list__item">Створення унікальних та сміливих продуктів.</li>
+											<li class="list__item">Створення нових концепцій, трендів, культури,
+												архітектури, типів, змісту і цінностей у проектах, які надихають,
+												приваблюють і дають нашим інвесторам, партнерам, набагато більшу
+												дохідність на ринку нерухомості.</li>
+										</ul>
+									</div>
+								</div>
+								<div class="spollers__item">
+									<button class="spollers__title _icon-caret-down" type="button" data-spoller>
+										Хто наші клієнти?
+									</button>
+									<div class="spollers__body">
+										<ul class="list">
+											<li class="list__item">Інвестори, які шукають варіант, як вигідно вкласти
+												гроші.</li>
+											<li class="list__item">Власники нерухомості, які планують почати заробляти.
+											</li>
+											<li class="list__item">Власники нерухомості, які хочуть підвищити
+												інвестиційний дохід.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section team" data-watch="navigator">
+				<div class="team__container">
+					<div class="team__title title">
+						<div class="title__text">Засновники</div>
+					</div>
+					<div class="team__body">
+						<div class="team__item team-item">
+							<div class="team-item__photo">
+								<div class="team-item__img -ibg">
+									<picture><source srcset="img/team/vadim_petrochenko.webp" type="image/webp"><img src="img/team/vadim_petrochenko.jpg" alt="Вадим Петроченко"></picture>
+								</div>
+							</div>
+							<div class="team-item__content">
+								<div class="team-item__header">
+									<div class="team-item__name">Вадим Петроченко</div>
+									<div class="team-item__social">
+										<div class="team-item__social-title">Соц. мережі:</div>
+										<div class="social">
+											<a class="social__link" href="#" target="_blank"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M5.57562 21.5015H1.22188V7.48117H5.57562V21.5015ZM3.39641 5.56867C2.00422 5.56867 0.875 4.41554 0.875 3.02336C0.875 2.35464 1.14065 1.71331 1.6135 1.24046C2.08636 0.7676 2.72769 0.501953 3.39641 0.501953C4.06512 0.501953 4.70645 0.7676 5.17931 1.24046C5.65216 1.71331 5.91781 2.35464 5.91781 3.02336C5.91781 4.41554 4.78813 5.56867 3.39641 5.56867ZM21.8703 21.5015H17.5259V14.6765C17.5259 13.0499 17.4931 10.964 15.2623 10.964C12.9987 10.964 12.6519 12.7312 12.6519 14.5593V21.5015H8.30281V7.48117H12.4784V9.39367H12.5394C13.1206 8.29211 14.5405 7.12961 16.6588 7.12961C21.065 7.12961 21.875 10.0312 21.875 13.7999V21.5015H21.8703Z" fill="black" />
+												</svg></a>
+										</div>
+									</div>
+								</div>
+								<div class="team-item__info info-box">
+									<div class="info-box__item info-box__item_span-2">
+										<div class="info-box__title">Реалізовані об’єкти в Україні та Європі</div>
+									</div>
+									<div class="info-box__item">
+										<div class="info-box__title">18 років</div>
+										<div class="info-box__desc">на будівельному ринку</div>
+									</div>
+									<div class="info-box__item">
+										<div class="info-box__title">16 років</div>
+										<div class="info-box__desc">у власному бізнесі на позиції SEO</div>
+									</div>
+									<div class="info-box__item">
+										<div class="info-box__title">500 000+ м2</div>
+										<div class="info-box__desc">збудованих комерційних площ</div>
+									</div>
+									<div class="info-box__item">
+										<div class="info-box__title">720+</div>
+										<div class="info-box__desc">задоволених клієнтів, серед яких топові світові
+											компанії з мільярдними оборотами</div>
+									</div>
+								</div>
+								<div class="team-item__companies">
+									<div class="team-item__companies-title">Керує холдингом, у складі якого:</div>
+									<div class="team-item__companies-items">
+										<a class="link" href="#" target="_blank">Partner
+											Construction</a>
+										<a class="link" href="#" target="_blank">Commercial
+											construction</a>
+										<a class="link" href="#" target="_blank">Partner Design</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="team__item team-item">
+							<div class="team-item__photo">
+								<div class="team-item__img -ibg">
+									<picture><source srcset="img/team/roman_varanytsia.webp" type="image/webp"><img src="img/team/roman_varanytsia.jpg" alt="Роман Вараниця"></picture>
+								</div>
+							</div>
+							<div class="team-item__content">
+								<div class="team-item__header">
+									<div class="team-item__name">Роман Вараниця</div>
+									<div class="team-item__social">
+										<div class="team-item__social-title">Соц. мережі:</div>
+										<div class="social">
+											<a class="social__link" href="#" target="_blank"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M5.57562 21.5015H1.22188V7.48117H5.57562V21.5015ZM3.39641 5.56867C2.00422 5.56867 0.875 4.41554 0.875 3.02336C0.875 2.35464 1.14065 1.71331 1.6135 1.24046C2.08636 0.7676 2.72769 0.501953 3.39641 0.501953C4.06512 0.501953 4.70645 0.7676 5.17931 1.24046C5.65216 1.71331 5.91781 2.35464 5.91781 3.02336C5.91781 4.41554 4.78813 5.56867 3.39641 5.56867ZM21.8703 21.5015H17.5259V14.6765C17.5259 13.0499 17.4931 10.964 15.2623 10.964C12.9987 10.964 12.6519 12.7312 12.6519 14.5593V21.5015H8.30281V7.48117H12.4784V9.39367H12.5394C13.1206 8.29211 14.5405 7.12961 16.6588 7.12961C21.065 7.12961 21.875 10.0312 21.875 13.7999V21.5015H21.8703Z" fill="black" />
+												</svg></a>
+										</div>
+									</div>
+								</div>
+								<div class="team-item__info info-box">
+									<div class="info-box__item">
+										<div class="info-box__title">10 років</div>
+										<div class="info-box__desc">досвіду професійного продажу нерухомості в Києві та
+											Київської області</div>
+									</div>
+									<div class="info-box__item">
+										<div class="info-box__title">7 років</div>
+										<div class="info-box__desc">у власному бізнесі.</div>
+									</div>
+									<div class="info-box__item">
+										<div class="info-box__title">70 000+ м2</div>
+										<div class="info-box__desc">проданих площ</div>
+									</div>
+									<div class="info-box__item">
+										<div class="info-box__title">1400+</div>
+										<div class="info-box__desc">задоволених клієнтів</div>
+									</div>
+								</div>
+								<ul class="team-item__list list">
+									<li class="list__item">Організатор першого онлайн-аукціону</li>
+									<li class="list__item">За 14 днів рекламної компанії зібрали 600+ інвесторів, з яких
+										95% готові інвестувати гроші у нерухомість</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section projects" data-watch="navigator">
+				<div class="projects__container">
+					<div class="projects__title title">
+						<div class="title__text">Проекти</div>
+					</div>
+					<div class="projects__body">
+						<div class="projects__type projects-type">
+							<div class="projects-type__title">Реалізовані</div>
+							<div class="projects-type__slider project-slider-1 swiper">
+								<div class="projects-type__slider-wrapper swiper-wrapper">
+									<div class="projects-type__slider-slide project-item swiper-slide">
+										<div class="project-item__content project-content">
+											<div class="project-content__title">AntHill Coworking</div>
+											<div class="project-content__info show-more" data-showmore="items">
+												<div class="project-content__text show-more__content" data-showmore-content="2">
+													<p>Наша компанія створила найкращі умови для роботи фрілансерів,
+														підприємців, малого та середнього бізнесу і фахівців в
+														області інформаційних технологій. </p>
+													<p>
+														Тут ви можете розраховувати на екодизайн, доброзичливу
+														атмосферу, підтримку розвитку
+														вашого бізнесу. Серед всіх коворкінгів Києва, наш вважається
+														одним з найкращих.
+													</p>
+													<p>
+														В коворкінгу передбачено все для роботи
+														на високому професійному рівні. Шумоізоляція передбачає
+														комфортну роботу, велика увага приділяється ефективному
+														освітленню, вентиляціії та мікроклімату, очистці повітря,
+														передовим технологіям.
+													</p>
+													<p>Тут працюють дуже відомі резиденти. Працювати в нашому
+														смарт-просторі приємно та комфортно, з'являється більше часу для
+														розвитку свого бізнесу.</p>
+												</div>
+												<button class="project-content__btn show-more__btn" type="button" data-showmore-button="1000">
+													<span>Показати більше</span>
+													<span>Приховати</span>
+												</button>
+											</div>
+											<div class="project-content__social social">
+												<a class="social__link _icon-facebook" href="#" target="_blank"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M5.57562 21.5015H1.22188V7.48117H5.57562V21.5015ZM3.39641 5.56867C2.00422 5.56867 0.875 4.41554 0.875 3.02336C0.875 2.35464 1.14065 1.71331 1.6135 1.24046C2.08636 0.7676 2.72769 0.501953 3.39641 0.501953C4.06512 0.501953 4.70645 0.7676 5.17931 1.24046C5.65216 1.71331 5.91781 2.35464 5.91781 3.02336C5.91781 4.41554 4.78813 5.56867 3.39641 5.56867ZM21.8703 21.5015H17.5259V14.6765C17.5259 13.0499 17.4931 10.964 15.2623 10.964C12.9987 10.964 12.6519 12.7312 12.6519 14.5593V21.5015H8.30281V7.48117H12.4784V9.39367H12.5394C13.1206 8.29211 14.5405 7.12961 16.6588 7.12961C21.065 7.12961 21.875 10.0312 21.875 13.7999V21.5015H21.8703Z" fill="black" />
+													</svg></a>
+												<a class="social__link _icon-instagram" href="#" target="_blank"><svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10.4375 0.303711C5.62813 0.303711 0.875 3.50996 0.875 8.69902C0.875 11.999 2.73125 13.874 3.85625 13.874C4.32031 13.874 4.5875 12.5803 4.5875 12.2146C4.5875 11.7787 3.47656 10.8506 3.47656 9.03652C3.47656 5.26777 6.34531 2.5959 10.0578 2.5959C13.25 2.5959 15.6125 4.40996 15.6125 7.74277C15.6125 10.2318 14.6141 14.9006 11.3797 14.9006C10.2125 14.9006 9.21406 14.0568 9.21406 12.8475C9.21406 11.0756 10.4516 9.35996 10.4516 7.53184C10.4516 4.42871 6.05 4.99121 6.05 8.74121C6.05 9.52871 6.14844 10.4006 6.5 11.1178C5.85312 13.9021 4.53125 18.0506 4.53125 20.9193C4.53125 21.8053 4.65781 22.6772 4.74219 23.5631C4.90156 23.7412 4.82188 23.7225 5.06563 23.6334C7.42813 20.399 7.34375 19.7662 8.4125 15.5334C8.98906 16.6303 10.4797 17.2209 11.6609 17.2209C16.6391 17.2209 18.875 12.3693 18.875 7.9959C18.875 3.34121 14.8531 0.303711 10.4375 0.303711Z" fill="black" />
+													</svg></a>
+											</div>
+											<div class="project-content__links">
+												<a class="project-content__link link" href="#" target="_blank">Перейти
+													на
+													сайт проекту</a>
+												<a class="project-content__link link link_download" href="@files/abc.pdf" download="">Завантажити
+													презентацію</a>
+											</div>
+										</div>
+										<div class="project-item__img-ibg"><img src="img/projects/anthill.jpg" alt="AntHill Coworking
+">
+										</div>
+									</div>
+								</div>
+								<div class="projects-type__slider-controls project-slider-1-controls">
+									<div class="project-slider-1-controls__arrows swiper-arrows">
+										<button class="swiper-arrows__btn swiper-arrows__btn_prev _icon-arrow-left" type="button"></button>
+										<button class="swiper-arrows__btn swiper-arrows__btn_next _icon-arrow-right" type="button"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="projects__type projects-type">
+							<div class="projects-type__title">У стадії реалізації</div>
+							<div class="projects-type__slider project-slider-2 swiper">
+								<div class="projects-type__slider-wrapper swiper-wrapper">
+									<div class="projects-type__slider-slide project-item swiper-slide">
+										<div class="project-item__content project-content">
+											<div class="project-content__title">7 avenu</div>
+											<div class="project-content__info show-more" data-showmore="items">
+												<div class="project-content__text show-more__content" data-showmore-content="2">
+													<p><b>Live work play dream enjoy</b></p>
+													<p>7 Avenue – клубний будинок у стилі “колівінг” з сучасною
+														архітектурою та своєю власною інфраструктурою. Розташований в
+														Києві. розрахований на “100+” резидентів, об’єднаних
+														спільною життєвою філософією та цінностями. Колівінг “60+”
+														апартаментів площею 19-40 м2 зі своїми террасами, балконами,
+														та зеленою зоною передбачає ще такі власні зони спільного
+														користування:</p>
+													<ul class="list">
+														<li class="list__item">Басейн</li>
+														<li class="list__item">Спортзал в середені</li>
+														<li class="list__item">Спортивний майданчик з зовні</li>
+														<li class="list__item">Бібліотеку</li>
+														<li class="list__item">Коворкінг</li>
+														<li class="list__item">Кінотеатр</li>
+														<li class="list__item">Ігрові зони</li>
+														<li class="list__item">Терасу на даху із зоною відпочинку</li>
+														<li class="list__item">Дві зони BBQ</li>
+														<li class="list__item">Майстер - кухня для загальних гастро
+															тусовок</li>
+														<li class="list__item">Паркінг із зарядкою для електрокарів</li>
+														<li class="list__item">Закритий двір</li>
+														<li class="list__item">Два окремих входа в будинок</li>
+														<li class="list__item">Рецепція з функцією “консьерж сервис”
+														</li>
+													</ul>
+													<p>7 AVENUЕ - це життя в одному будинку з кращими друзями. Ви можете
+														влаштовувати вечірки, ходити один до одного в гості,
+														або збиратись разом на майстер-кухні та готувати, грати в
+														плейстейшн, дивитись кіно у власному кінотеатрі з друзями,
+														грати в теніс, дартс та інші ігри, робити смачне барбекю на
+														даху, малювати, спостерігати світанок та захід сонця з
+														власної тераси, засмагати біля басейну в центрі міста, займатись
+														йогою, тренуватись, читати книжки, працювати в
+														коворкінгу, та після роботи відпочити з коктейлями біля басейну
+														- це лише мала частина того, що може запропонувати
+														колівінг 7 AVENUE! Життя в стилі колівінг - це сучасно,
+														драйвово, це те, чого так потребує наша столиця. Успішні
+														мілленіали вже давно перейшли у швидкий ритм життя, коли офіс -
+														це класний коворкінг, а квартира - це місце для чіллу та
+														сну. Встигай усе та будь у тренді життя</p>
+												</div>
+												<button class="project-content__btn show-more__btn" type="button" data-showmore-button="1000">
+													<span>Показати більше</span>
+													<span>Приховати</span>
+												</button>
+											</div>
+											<div class="project-content__social social">
+												<a class="social__link _icon-facebook" href="#" target="_blank"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M5.57562 21.5015H1.22188V7.48117H5.57562V21.5015ZM3.39641 5.56867C2.00422 5.56867 0.875 4.41554 0.875 3.02336C0.875 2.35464 1.14065 1.71331 1.6135 1.24046C2.08636 0.7676 2.72769 0.501953 3.39641 0.501953C4.06512 0.501953 4.70645 0.7676 5.17931 1.24046C5.65216 1.71331 5.91781 2.35464 5.91781 3.02336C5.91781 4.41554 4.78813 5.56867 3.39641 5.56867ZM21.8703 21.5015H17.5259V14.6765C17.5259 13.0499 17.4931 10.964 15.2623 10.964C12.9987 10.964 12.6519 12.7312 12.6519 14.5593V21.5015H8.30281V7.48117H12.4784V9.39367H12.5394C13.1206 8.29211 14.5405 7.12961 16.6588 7.12961C21.065 7.12961 21.875 10.0312 21.875 13.7999V21.5015H21.8703Z" fill="black" />
+													</svg></a>
+												<a class="social__link _icon-instagram" href="#" target="_blank"><svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10.4375 0.303711C5.62813 0.303711 0.875 3.50996 0.875 8.69902C0.875 11.999 2.73125 13.874 3.85625 13.874C4.32031 13.874 4.5875 12.5803 4.5875 12.2146C4.5875 11.7787 3.47656 10.8506 3.47656 9.03652C3.47656 5.26777 6.34531 2.5959 10.0578 2.5959C13.25 2.5959 15.6125 4.40996 15.6125 7.74277C15.6125 10.2318 14.6141 14.9006 11.3797 14.9006C10.2125 14.9006 9.21406 14.0568 9.21406 12.8475C9.21406 11.0756 10.4516 9.35996 10.4516 7.53184C10.4516 4.42871 6.05 4.99121 6.05 8.74121C6.05 9.52871 6.14844 10.4006 6.5 11.1178C5.85312 13.9021 4.53125 18.0506 4.53125 20.9193C4.53125 21.8053 4.65781 22.6772 4.74219 23.5631C4.90156 23.7412 4.82188 23.7225 5.06563 23.6334C7.42813 20.399 7.34375 19.7662 8.4125 15.5334C8.98906 16.6303 10.4797 17.2209 11.6609 17.2209C16.6391 17.2209 18.875 12.3693 18.875 7.9959C18.875 3.34121 14.8531 0.303711 10.4375 0.303711Z" fill="black" />
+													</svg></a>
+											</div>
+											<div class="project-content__links">
+												<a class="project-content__link link" href="#" target="_blank">Перейти
+													на
+													сайт проекту</a>
+												<a class="project-content__link link link_download" href="@files/abc.pdf" download="">Завантажити
+													презентацію</a>
+											</div>
+										</div>
+										<div class="project-item__img-ibg"><picture><source srcset="img/projects/7avenue.webp" type="image/webp"><img src="img/projects/7avenue.jpg" alt="7avenue"></picture><button class="project-item__popup _icon-play" type="button" data-popup="#video" data-popup-youtube="Zy0cQf-0WXQ"></button>
+										</div>
+									</div>
+									<div class="projects-type__slider-slide project-item swiper-slide">
+										<div class="project-item__content project-content">
+											<div class="project-content__title">Amsterdam</div>
+											<div class="project-content__info show-more" data-showmore="items">
+												<div class="project-content__text show-more__content" data-showmore-content="2">
+													<p>AmsterDam — Маленька Європа в найзеленішому районі Києва.</p>
+													<p>Клубний малоповерховий житловий комплекс у стилі колівінг з
+														власною інфраструктурою. Вишукана європейська архітектура
+														поєднана з сучасними технологіями. Усе найкраще в одному місці
+														для щасливого життя родин.</p>
+													<ul class="list">
+														<li class="list__item">Ком’юніті для росту і розвитку.</li>
+														<li class="list__item">Площа квартир без зайвих квадратур.</li>
+														<li class="list__item">100+ друзів, які завжди поруч.</li>
+														<li class="list__item">Твоя персональна “Кремнієва долина”
+														</li>
+														<li class="list__item">Багато спільного простору для життя,
+															роботи, відпочинку.</li>
+														<li class="list__item">Житловий комплекс, де кожен сусід = друг.
+														</li>
+													</ul>
+													<p>AmsterDam House — не просто дім, а ком'юніті для росту і
+														розвитку. Твоє життя тут перетвориться на мрію. Мрій та будуй
+														свою сім'ю в Амстері.</p>
+													<p>
+														Для відкритих та проактивних. Для тих, хто мріяв жити у Європі,
+														але нізащо не проміняв би батьківщину. Для тих, хто
+														розуміє силу нетворкінгу. Для тих, хто готовий виховувати brand
+														new покоління і втілювати fresh ідеї!
+													</p>
+													<p>Ставай вже сьогодні нашим резидентом, будуй своє життя в
+														правильному комьюніті та створюй нове покоління.</p>
+												</div>
+												<button class="project-content__btn show-more__btn" type="button" data-showmore-button="1000">
+													<span>Показати більше</span>
+													<span>Приховати</span>
+												</button>
+											</div>
+											<div class="project-content__social social">
+												<a class="social__link _icon-facebook" href="#" target="_blank"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M5.57562 21.5015H1.22188V7.48117H5.57562V21.5015ZM3.39641 5.56867C2.00422 5.56867 0.875 4.41554 0.875 3.02336C0.875 2.35464 1.14065 1.71331 1.6135 1.24046C2.08636 0.7676 2.72769 0.501953 3.39641 0.501953C4.06512 0.501953 4.70645 0.7676 5.17931 1.24046C5.65216 1.71331 5.91781 2.35464 5.91781 3.02336C5.91781 4.41554 4.78813 5.56867 3.39641 5.56867ZM21.8703 21.5015H17.5259V14.6765C17.5259 13.0499 17.4931 10.964 15.2623 10.964C12.9987 10.964 12.6519 12.7312 12.6519 14.5593V21.5015H8.30281V7.48117H12.4784V9.39367H12.5394C13.1206 8.29211 14.5405 7.12961 16.6588 7.12961C21.065 7.12961 21.875 10.0312 21.875 13.7999V21.5015H21.8703Z" fill="black" />
+													</svg></a>
+												<a class="social__link _icon-instagram" href="#" target="_blank"><svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10.4375 0.303711C5.62813 0.303711 0.875 3.50996 0.875 8.69902C0.875 11.999 2.73125 13.874 3.85625 13.874C4.32031 13.874 4.5875 12.5803 4.5875 12.2146C4.5875 11.7787 3.47656 10.8506 3.47656 9.03652C3.47656 5.26777 6.34531 2.5959 10.0578 2.5959C13.25 2.5959 15.6125 4.40996 15.6125 7.74277C15.6125 10.2318 14.6141 14.9006 11.3797 14.9006C10.2125 14.9006 9.21406 14.0568 9.21406 12.8475C9.21406 11.0756 10.4516 9.35996 10.4516 7.53184C10.4516 4.42871 6.05 4.99121 6.05 8.74121C6.05 9.52871 6.14844 10.4006 6.5 11.1178C5.85312 13.9021 4.53125 18.0506 4.53125 20.9193C4.53125 21.8053 4.65781 22.6772 4.74219 23.5631C4.90156 23.7412 4.82188 23.7225 5.06563 23.6334C7.42813 20.399 7.34375 19.7662 8.4125 15.5334C8.98906 16.6303 10.4797 17.2209 11.6609 17.2209C16.6391 17.2209 18.875 12.3693 18.875 7.9959C18.875 3.34121 14.8531 0.303711 10.4375 0.303711Z" fill="black" />
+													</svg></a>
+											</div>
+											<div class="project-content__links">
+												<a class="project-content__link link" href="#" target="_blank">Перейти
+													на
+													сайт проекту</a>
+												<a class="project-content__link link link_download" href="@files/abc.pdf" download="">Завантажити
+													презентацію</a>
+											</div>
+										</div>
+										<div class="project-item__img-ibg"><picture><source srcset="img/myimg.webp" type="image/webp"><img src="img/myimg.jpeg" alt="Amsterdam"></picture>
+										</div>
+									</div>
+								</div>
+								<div class="projects-type__slider-controls project-slider-2-controls">
+									<div class="project-slider-2-controls__arrows swiper-arrows">
+										<button class="swiper-arrows__btn swiper-arrows__btn_prev _icon-arrow-left" type="button"></button>
+										<button class="swiper-arrows__btn swiper-arrows__btn_next _icon-arrow-right" type="button"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="projects__type projects-type">
+							<div class="projects-type__title">У стадії концепції</div>
+							<div class="projects-type__slider project-slider-3 swiper">
+								<div class="projects-type__slider-wrapper swiper-wrapper">
+									<div class="projects-type__slider-slide project-item swiper-slide">
+										<div class="project-item__content project-content">
+											<div class="project-content__title">Palyanytsya home</div>
+											<div class="project-content__info show-more" data-showmore="items">
+												<div class="project-content__text show-more__content" data-showmore-content="2">
+													<p>Двоетапний соціальний проект. Український стартап.</p>
+													<p><b>«Palyanytsya Home» – новий світ для відновлення українців, які
+															втратили свій дім.</b></p>
+													<p>«Паляниця Дім» - затишний простір, де людина чи сім’я зможуть
+														швидше пройти реабілітацію, отримати психологічну і
+														медичну допомогу.
+													</p>
+													<p><b>Про проект:</b></p>
+													<p><b>Медично - психологічний центр допомоги з тимчасовим
+															проживанням людей.</b></p>
+													<ul class="list">
+														<li class="list__item">Для людей, які втратили своє житло через
+															війну в Україні. Для людей які зазнали значних психологічних
+															травм через війну
+															та тортури. Для людей чиє здоров’я під загрозою.
+														</li>
+														<li class="list__item">З наданням на місці усієї необхідної
+															допомоги, а саме: медичної, психологічної, реабілітаційної
+															та інших видів допомоги
+															постраждалим українцям.</li>
+														<li class="list__item">Центр планується зробити з усією
+															необхідною інфраструктурою для гідного життя, праці і
+															навчання людей.
+														</li>
+														<li class="list__item">Застосовуємо інноваційне швидке
+															будівництво, для створення гідних центрів медичної,
+															реабілітаційної та психологічної
+															підтримки з тимчасових поселенням.
+														</li>
+													</ul>
+													<p>
+														Центр «Паляниця Дім» на відміну від стандартних місць для життя
+														переселенців, сприяє як психологічній так і медичній
+														реабілітації. Маючи власний простір, аналог квартири (дому),
+														людина не відчуває себе біженцем, та за підтримки
+														психологів швидше відновлюється, в неї знов з’являється жага та
+														сили продовжувати життя.
+													</p>
+												</div>
+												<button class="project-content__btn show-more__btn" type="button" data-showmore-button="1000">
+													<span>Показати більше</span>
+													<span>Приховати</span>
+												</button>
+											</div>
+											<div class="project-content__social social">
+												<a class="social__link _icon-facebook" href="#" target="_blank"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M5.57562 21.5015H1.22188V7.48117H5.57562V21.5015ZM3.39641 5.56867C2.00422 5.56867 0.875 4.41554 0.875 3.02336C0.875 2.35464 1.14065 1.71331 1.6135 1.24046C2.08636 0.7676 2.72769 0.501953 3.39641 0.501953C4.06512 0.501953 4.70645 0.7676 5.17931 1.24046C5.65216 1.71331 5.91781 2.35464 5.91781 3.02336C5.91781 4.41554 4.78813 5.56867 3.39641 5.56867ZM21.8703 21.5015H17.5259V14.6765C17.5259 13.0499 17.4931 10.964 15.2623 10.964C12.9987 10.964 12.6519 12.7312 12.6519 14.5593V21.5015H8.30281V7.48117H12.4784V9.39367H12.5394C13.1206 8.29211 14.5405 7.12961 16.6588 7.12961C21.065 7.12961 21.875 10.0312 21.875 13.7999V21.5015H21.8703Z" fill="black" />
+													</svg></a>
+												<a class="social__link _icon-instagram" href="#" target="_blank"><svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10.4375 0.303711C5.62813 0.303711 0.875 3.50996 0.875 8.69902C0.875 11.999 2.73125 13.874 3.85625 13.874C4.32031 13.874 4.5875 12.5803 4.5875 12.2146C4.5875 11.7787 3.47656 10.8506 3.47656 9.03652C3.47656 5.26777 6.34531 2.5959 10.0578 2.5959C13.25 2.5959 15.6125 4.40996 15.6125 7.74277C15.6125 10.2318 14.6141 14.9006 11.3797 14.9006C10.2125 14.9006 9.21406 14.0568 9.21406 12.8475C9.21406 11.0756 10.4516 9.35996 10.4516 7.53184C10.4516 4.42871 6.05 4.99121 6.05 8.74121C6.05 9.52871 6.14844 10.4006 6.5 11.1178C5.85312 13.9021 4.53125 18.0506 4.53125 20.9193C4.53125 21.8053 4.65781 22.6772 4.74219 23.5631C4.90156 23.7412 4.82188 23.7225 5.06563 23.6334C7.42813 20.399 7.34375 19.7662 8.4125 15.5334C8.98906 16.6303 10.4797 17.2209 11.6609 17.2209C16.6391 17.2209 18.875 12.3693 18.875 7.9959C18.875 3.34121 14.8531 0.303711 10.4375 0.303711Z" fill="black" />
+													</svg></a>
+											</div>
+											<div class="project-content__links">
+												<a class="project-content__link link" href="https://palyanytsya.homes/" target="_blank">Перейти на
+													сайт проекту</a>
+												<a class="project-content__link link link_download" href="@files/abc.pdf" download="">Завантажити презентацію</a>
+											</div>
+										</div>
+										<div class="project-item__img-ibg"><picture><source srcset="img/projects/palyanicya.webp" type="image/webp"><img src="img/projects/palyanicya.jpg" alt="Паляниця"></picture></div>
+									</div>
+									<div class="projects-type__slider-slide project-item swiper-slide">
+										<div class="project-item__content project-content">
+											<div class="project-content__title">Mriya town</div>
+											<div class="project-content__info show-more" data-showmore="items">
+												<div class="project-content__text show-more__content" data-showmore-content="2">
+													<p>«МРІЯ» - твоє місто мрій, де мрії збуваються.</p>
+													<p>Мрій та живи в Українських традиціях в місті з сучасною
+														архітектурою.</p>
+													<p><b>
+															Котеджне містечко «МРІЯ» - це найкращі світові технології з
+															модульного PREFAB будівництва, поєднанні з сучасною
+															архітектурою та українськими традиціями.
+														</b></p>
+													<p>«Мрія» - це сучасне котеджне містечко на 1000 будинків з всією
+														необхідною для повноцінного життя інфраструктурою. Воно
+														включає одно- та дво- поверхові приватні будинки, школу,
+														садочок, магазини, майданчики для спорту та ігор, та багато
+														цікавого та сучасного простору за всіма стандартами якості.</p>
+													<p><b>Про «Мрію»:</b></p>
+													<p>Будинки в котеджному містечку «Мрія» будуть побудовані за
+														технологією PREFAB з використанням теплих та міцних
+														сендвіч-панелей. Перевага такого будівництва в швидкості та
+														якості зборки на виробництві, а зараз це найголовніше для
+														швидкого відновлення українських міст. Виробництво та монтаж
+														такого дому займе лише 2 місяці. Крім того, будівництво за
+														технологією «prefab» дозволяє змінювати площу будинку –
+														добудовувати з часом цілі секції з кімнатами для дітей та іншими
+														необхідними просторами.</p>
+													<p><b>Ідея «Дім-конструктор»:</b></p>
+													<ul class="list">
+														<li class="list__item">у вас з’явився автомобіль, отож ви можете
+															додати гараж з одного боку дому;
+														</li>
+														<li class="list__item">у вас з’явилась власна справа, то ви
+															можете додати комерційне приміщення до свого будинка з іншої
+															сторони;</li>
+														<li class="list__item">у вас поповнення в сім’ї та вам потрібні
+															додаткові кімнати, санвузли і інші простори, і тут ви маєте
+															можливість додати
+															ще один блок з третьої сторони з усім необхідним
+															функціоналом.
+														</li>
+													</ul>
+													<p>
+														Основний та перший блок дому незмінні, а додатково можна
+														додавати інші блоки з різними функціями.
+													</p>
+												</div>
+												<button class="project-content__btn show-more__btn" type="button" data-showmore-button="1000">
+													<span>Показати більше</span>
+													<span>Приховати</span>
+												</button>
+											</div>
+											<div class="project-content__social social">
+												<a class="social__link _icon-facebook" href="#" target="_blank"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M5.57562 21.5015H1.22188V7.48117H5.57562V21.5015ZM3.39641 5.56867C2.00422 5.56867 0.875 4.41554 0.875 3.02336C0.875 2.35464 1.14065 1.71331 1.6135 1.24046C2.08636 0.7676 2.72769 0.501953 3.39641 0.501953C4.06512 0.501953 4.70645 0.7676 5.17931 1.24046C5.65216 1.71331 5.91781 2.35464 5.91781 3.02336C5.91781 4.41554 4.78813 5.56867 3.39641 5.56867ZM21.8703 21.5015H17.5259V14.6765C17.5259 13.0499 17.4931 10.964 15.2623 10.964C12.9987 10.964 12.6519 12.7312 12.6519 14.5593V21.5015H8.30281V7.48117H12.4784V9.39367H12.5394C13.1206 8.29211 14.5405 7.12961 16.6588 7.12961C21.065 7.12961 21.875 10.0312 21.875 13.7999V21.5015H21.8703Z" fill="black" />
+													</svg></a>
+												<a class="social__link _icon-instagram" href="#" target="_blank"><svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10.4375 0.303711C5.62813 0.303711 0.875 3.50996 0.875 8.69902C0.875 11.999 2.73125 13.874 3.85625 13.874C4.32031 13.874 4.5875 12.5803 4.5875 12.2146C4.5875 11.7787 3.47656 10.8506 3.47656 9.03652C3.47656 5.26777 6.34531 2.5959 10.0578 2.5959C13.25 2.5959 15.6125 4.40996 15.6125 7.74277C15.6125 10.2318 14.6141 14.9006 11.3797 14.9006C10.2125 14.9006 9.21406 14.0568 9.21406 12.8475C9.21406 11.0756 10.4516 9.35996 10.4516 7.53184C10.4516 4.42871 6.05 4.99121 6.05 8.74121C6.05 9.52871 6.14844 10.4006 6.5 11.1178C5.85312 13.9021 4.53125 18.0506 4.53125 20.9193C4.53125 21.8053 4.65781 22.6772 4.74219 23.5631C4.90156 23.7412 4.82188 23.7225 5.06563 23.6334C7.42813 20.399 7.34375 19.7662 8.4125 15.5334C8.98906 16.6303 10.4797 17.2209 11.6609 17.2209C16.6391 17.2209 18.875 12.3693 18.875 7.9959C18.875 3.34121 14.8531 0.303711 10.4375 0.303711Z" fill="black" />
+													</svg></a>
+											</div>
+											<div class="project-content__links">
+												<a class="project-content__link link" href="#" target="_blank">Перейти
+													на
+													сайт проекту</a>
+												<a class="project-content__link link link_download" href="@files/abc.pdf" download="">Завантажити презентацію</a>
+											</div>
+										</div>
+										<div class="project-item__img-ibg"><picture><source srcset="img/myimg.webp" type="image/webp"><img src="img/myimg.jpeg" alt="Мрія"></picture>
+										</div>
+									</div>
+									<div class="projects-type__slider-slide project-item swiper-slide">
+										<div class="project-item__content project-content">
+											<div class="project-content__title">United ukraine</div>
+											<div class="project-content__info show-more" data-showmore="items">
+												<div class="project-content__text show-more__content" data-showmore-content="2">
+													<p>Проект який об'єднає Україну і світ.</p>
+													<p>«Юнайтед Юкрейн» - сучасний проект забудови житлових кварталів
+														міст в Київській, Харківській, Чернігівській, Сумській та
+														інших областей України, що постраждали внаслідок війни. Це
+														якісне постійне житло для людей.</p>
+													<p>Наразі працюємо над концепцією. Усі деталі згодом…</p>
+												</div>
+												<button class="project-content__btn show-more__btn" type="button" data-showmore-button="1000">
+													<span>Показати більше</span>
+													<span>Приховати</span>
+												</button>
+											</div>
+											<div class="project-content__social social">
+												<a class="social__link _icon-facebook" href="#" target="_blank"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M5.57562 21.5015H1.22188V7.48117H5.57562V21.5015ZM3.39641 5.56867C2.00422 5.56867 0.875 4.41554 0.875 3.02336C0.875 2.35464 1.14065 1.71331 1.6135 1.24046C2.08636 0.7676 2.72769 0.501953 3.39641 0.501953C4.06512 0.501953 4.70645 0.7676 5.17931 1.24046C5.65216 1.71331 5.91781 2.35464 5.91781 3.02336C5.91781 4.41554 4.78813 5.56867 3.39641 5.56867ZM21.8703 21.5015H17.5259V14.6765C17.5259 13.0499 17.4931 10.964 15.2623 10.964C12.9987 10.964 12.6519 12.7312 12.6519 14.5593V21.5015H8.30281V7.48117H12.4784V9.39367H12.5394C13.1206 8.29211 14.5405 7.12961 16.6588 7.12961C21.065 7.12961 21.875 10.0312 21.875 13.7999V21.5015H21.8703Z" fill="black" />
+													</svg></a>
+												<a class="social__link _icon-instagram" href="#" target="_blank"><svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10.4375 0.303711C5.62813 0.303711 0.875 3.50996 0.875 8.69902C0.875 11.999 2.73125 13.874 3.85625 13.874C4.32031 13.874 4.5875 12.5803 4.5875 12.2146C4.5875 11.7787 3.47656 10.8506 3.47656 9.03652C3.47656 5.26777 6.34531 2.5959 10.0578 2.5959C13.25 2.5959 15.6125 4.40996 15.6125 7.74277C15.6125 10.2318 14.6141 14.9006 11.3797 14.9006C10.2125 14.9006 9.21406 14.0568 9.21406 12.8475C9.21406 11.0756 10.4516 9.35996 10.4516 7.53184C10.4516 4.42871 6.05 4.99121 6.05 8.74121C6.05 9.52871 6.14844 10.4006 6.5 11.1178C5.85312 13.9021 4.53125 18.0506 4.53125 20.9193C4.53125 21.8053 4.65781 22.6772 4.74219 23.5631C4.90156 23.7412 4.82188 23.7225 5.06563 23.6334C7.42813 20.399 7.34375 19.7662 8.4125 15.5334C8.98906 16.6303 10.4797 17.2209 11.6609 17.2209C16.6391 17.2209 18.875 12.3693 18.875 7.9959C18.875 3.34121 14.8531 0.303711 10.4375 0.303711Z" fill="black" />
+													</svg></a>
+											</div>
+											<div class="project-content__links">
+												<a class="project-content__link link" href="#" target="_blank">Перейти
+													на
+													сайт проекту</a>
+												<a class="project-content__link link link_download" href="@files/abc.pdf" download="">Завантажити
+													презентацію</a>
+											</div>
+										</div>
+										<div class="project-item__img-ibg"><picture><source srcset="img/myimg.webp" type="image/webp"><img src="img/myimg.jpeg" alt="United ukraine"></picture>
+										</div>
+									</div>
+								</div>
+								<div class="projects-type__slider-controls project-slider-3-controls">
+									<div class="project-slider-3-controls__arrows swiper-arrows">
+										<button class="swiper-arrows__btn swiper-arrows__btn_prev _icon-arrow-left" type="button"></button>
+										<button class="swiper-arrows__btn swiper-arrows__btn_next _icon-arrow-right" type="button"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="section footer" data-watch="navigator">
+			<div class="footer__container">
+				<div class="footer__title title">
+					<div class="title__text">Контакти</div>
+				</div>
+				<div class="footer__contact-form contact-form">
+					<div class="contact-form__title">Дізнайтесь як заробити 20% річних в нерухомості!</div>
+					<div class="contact-form__form">
+						<form class="form" action="" method="">
+							<div class="form__line">
+								<input class="form__input input" type="text" name="" placeholder="Ім'я">
+							</div>
+							<div class="form__line">
+								<input class="form__input input" type="email" name="" placeholder="Email">
+							</div>
+							<div class="form__line form__line_full">
+								<textarea class="form__input input" name="" placeholder="Повідомлення" rows="5"></textarea>
+							</div>
+							<button class="form__btn btn" type="submit">Надіслати</button>
+						</form>
+					</div>
+				</div>
+				<div class="footer__contacts">
+					<div class="footer__contacts-row">
+						<div class="footer__contacts-title">Соц. мережі:</div>
+						<div class="footer__social social">
+							<a class="social__link" href="https://www.facebook.com/AllRight.development.investment/" target="_blank"><svg width="24" height="24" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.0117 13.5015L12.6783 9.15803H8.51064V6.33943C8.51064 5.15115 9.09282 3.99287 10.9594 3.99287H12.8541V0.294902C12.8541 0.294902 11.1347 0.00146484 9.49079 0.00146484C6.0586 0.00146484 3.81516 2.08178 3.81516 5.84771V9.15803H0V13.5015H3.81516V24.0015H8.51064V13.5015H12.0117Z" fill="black" />
+								</svg></a>
+							<a class="social__link" href="https://www.instagram.com/allright.development/?hl=en" target="_blank"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11.3622 5.61562C8.38095 5.61562 5.97626 8.02031 5.97626 11.0016C5.97626 13.9828 8.38095 16.3875 11.3622 16.3875C14.3434 16.3875 16.7481 13.9828 16.7481 11.0016C16.7481 8.02031 14.3434 5.61562 11.3622 5.61562ZM11.3622 14.5031C9.43564 14.5031 7.86064 12.9328 7.86064 11.0016C7.86064 9.07031 9.43095 7.5 11.3622 7.5C13.2934 7.5 14.8638 9.07031 14.8638 11.0016C14.8638 12.9328 13.2888 14.5031 11.3622 14.5031V14.5031ZM18.2247 5.39531C18.2247 6.09375 17.6622 6.65156 16.9684 6.65156C16.27 6.65156 15.7122 6.08906 15.7122 5.39531C15.7122 4.70156 16.2747 4.13906 16.9684 4.13906C17.6622 4.13906 18.2247 4.70156 18.2247 5.39531ZM21.7919 6.67031C21.7122 4.9875 21.3278 3.49687 20.095 2.26875C18.8669 1.04062 17.3763 0.65625 15.6934 0.571875C13.9591 0.473438 8.76064 0.473438 7.02626 0.571875C5.34814 0.651562 3.85752 1.03594 2.62471 2.26406C1.39189 3.49219 1.01221 4.98281 0.927832 6.66562C0.829395 8.4 0.829395 13.5984 0.927832 15.3328C1.00752 17.0156 1.39189 18.5062 2.62471 19.7344C3.85752 20.9625 5.34345 21.3469 7.02626 21.4312C8.76064 21.5297 13.9591 21.5297 15.6934 21.4312C17.3763 21.3516 18.8669 20.9672 20.095 19.7344C21.3231 18.5062 21.7075 17.0156 21.7919 15.3328C21.8903 13.5984 21.8903 8.40468 21.7919 6.67031V6.67031ZM19.5513 17.1937C19.1856 18.1125 18.4778 18.8203 17.5544 19.1906C16.1716 19.7391 12.8903 19.6125 11.3622 19.6125C9.83407 19.6125 6.54814 19.7344 5.17002 19.1906C4.25127 18.825 3.54345 18.1172 3.17314 17.1937C2.62471 15.8109 2.75127 12.5297 2.75127 11.0016C2.75127 9.47343 2.62939 6.1875 3.17314 4.80937C3.53877 3.89062 4.24658 3.18281 5.17002 2.8125C6.55283 2.26406 9.83407 2.39062 11.3622 2.39062C12.8903 2.39062 16.1763 2.26875 17.5544 2.8125C18.4731 3.17812 19.1809 3.88594 19.5513 4.80937C20.0997 6.19218 19.9731 9.47343 19.9731 11.0016C19.9731 12.5297 20.0997 15.8156 19.5513 17.1937Z" fill="black" />
+								</svg>
+							</a>
+							<a class="social__link" href="https://www.linkedin.com/company/ardi-group-com/" target="_blank"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M5.57562 21.5015H1.22188V7.48117H5.57562V21.5015ZM3.39641 5.56867C2.00422 5.56867 0.875 4.41554 0.875 3.02336C0.875 2.35464 1.14065 1.71331 1.6135 1.24046C2.08636 0.7676 2.72769 0.501953 3.39641 0.501953C4.06512 0.501953 4.70645 0.7676 5.17931 1.24046C5.65216 1.71331 5.91781 2.35464 5.91781 3.02336C5.91781 4.41554 4.78813 5.56867 3.39641 5.56867ZM21.8703 21.5015H17.5259V14.6765C17.5259 13.0499 17.4931 10.964 15.2623 10.964C12.9987 10.964 12.6519 12.7312 12.6519 14.5593V21.5015H8.30281V7.48117H12.4784V9.39367H12.5394C13.1206 8.29211 14.5405 7.12961 16.6588 7.12961C21.065 7.12961 21.875 10.0312 21.875 13.7999V21.5015H21.8703Z" fill="black" />
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="footer__contacts-row">
+						<div class="footer__contacts-title">Телефон:</div>
+						<div class="footer__contacts__phone phone">
+							<a class="phone__link link" href="tel:+380737107171">+38 (073) 710 71 71</a>
+						</div>
+					</div>
+					<div class="footer__contacts-row">
+						<div class="footer__contacts-title">Email:</div>
+						<div class="footer__contacts__email email">
+							<div class="email__item">
+								<div class="email__title">Для звернень:</div>
+								<a class="email__link link" href="mailto:office@all-right.com.ua">office@all-right.com.ua</a>
+							</div>
+							<div class="email__item">
+								<div class="email__title">Відділ продажів:</div>
+								<a class="email__link link" href="mailto:sales@all-right.com.ua">ales@all-right.com.ua</a>
+							</div>
+							<div class="email__item">
+								<div class="email__title">З питань реклами:</div>
+								<a class="email__link link" href="mailto:marketing@all-right.com.ua">marketing@all-right.com.ua</a>
+							</div>
+							<div class="email__item">
+								<div class="email__title">PR та ЗМІ:</div>
+								<a class="email__link link" href="mailto:pr@all-right.com.ua">pr@all-right.com.ua</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__contacts-row">
+						<div class="footer__contacts-title">Адреса:</div>
+						<div class="footer__contacts__address address">
+							<a class="address__link link" href="https://goo.gl/maps/g7TGV4AQYPcPJjW27">м.Київ,
+								вул.Миколи Василенка, 7,
+								03124</a>
+							<div class="address__map map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.5685290695!2d30.419679!3d50.449137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc15566abc7f%3A0xe2ae61ed5f244706!2z0YPQuy4g0J3QuNC60L7Qu9Cw0Y8g0JLQsNGB0LjQu9C10L3QutC-LCA3LCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1654143759306!5m2!1sru!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom bottom-footer">
+					<a class="bottom-footer__logo" href="index.html"><img src="img/svg/logo_bottom.svg" alt="logo"></a>
+					<div class="bottom-footer__copy">© «All Right» 2022. All Rights Resevered</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div id="video" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"><span></span></button>
+				<div class="popup__text">
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20220614011737"></script>
+</body>
+
+</html>
