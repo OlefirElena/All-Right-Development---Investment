@@ -1520,6 +1520,9 @@ p {
   position: absolute;
   right: 1.25rem;
   color: #fff;
+  -webkit-transform: scale(-1);
+      -ms-transform: scale(-1);
+          transform: scale(-1);
   content: "\e905";
 }
 
@@ -2325,6 +2328,7 @@ p {
 
 .project-content__title {
   color: #998162;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -3960,6 +3964,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .team-item__social {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
   .team-item__companies {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
@@ -4125,7 +4135,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     margin: 0 auto;
   }
 
-  .projects-type__slider-controls .swiper-arrows {
+  .projects-type__slider-controls {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
