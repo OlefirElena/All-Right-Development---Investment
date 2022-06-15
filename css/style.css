@@ -3975,6 +3975,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .project-item.showmored {
+    -ms-grid-columns: 1fr 0fr;
+    grid-template-columns: 1fr 0fr;
+  }
+
+  .project-item.showmored .project-item__img-ibg {
+    display: none;
+  }
+
   .aside {
     border-left: 1px solid #fff;
     padding-left: 2.5rem;

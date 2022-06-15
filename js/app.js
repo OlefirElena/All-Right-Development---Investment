@@ -496,12 +496,14 @@
                         if (targetEvent.closest("[data-showmore-button]")) {
                             const showMoreButton = targetEvent.closest("[data-showmore-button]");
                             const showMoreBlock = showMoreButton.closest("[data-showmore]");
+                            const itemWrapper = showMoreButton.closest(".project-item");
                             const showMoreContent = showMoreBlock.querySelector("[data-showmore-content]");
                             const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : "500";
                             const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
                             if (!showMoreContent.classList.contains("_slide")) {
                                 showMoreBlock.classList.contains("_showmore-active") ? _slideUp(showMoreContent, showMoreSpeed, hiddenHeight) : _slideDown(showMoreContent, showMoreSpeed, hiddenHeight);
                                 showMoreBlock.classList.toggle("_showmore-active");
+                                itemWrapper.classList.toggle("showmored");
                             }
                         }
                     } else if ("resize" === targetType) {
