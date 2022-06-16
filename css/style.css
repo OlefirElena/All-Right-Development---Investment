@@ -120,7 +120,7 @@ body {
 body {
   color: #fff;
   line-height: 1;
-  font-family: "Poppins", sans-serif;
+  font-family: "NotoSans", sans-serif;
   font-size: 1.125rem;
   font-weight: 300;
   -ms-text-size-adjust: 100%;
@@ -133,7 +133,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Poppins", sans-serif;
+  font-family: "NotoSans", sans-serif;
   font-size: inherit;
 }
 
@@ -3185,7 +3185,7 @@ p {
 }
 
 .lg-container {
-  font-family: "Poppins", sans-serif;
+  font-family: "NotoSans", sans-serif;
 }
 
 .lg-next,
