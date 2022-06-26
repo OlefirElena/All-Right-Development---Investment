@@ -1,14 +1,14 @@
 (() => {
     var __webpack_modules__ = {
-        2: function(module, exports, __webpack_require__) {
+        2: function (module, exports, __webpack_require__) {
             var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
- /*! smooth-scroll v16.1.3 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/smooth-scroll */            window.Element && !Element.prototype.closest && (Element.prototype.closest = function(e) {
+ /*! smooth-scroll v16.1.3 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/smooth-scroll */            window.Element && !Element.prototype.closest && (Element.prototype.closest = function (e) {
                 var t, n = (this.document || this.ownerDocument).querySelectorAll(e), o = this;
                 do {
-                    for (t = n.length; 0 <= --t && n.item(t) !== o; ) ;
+                    for (t = n.length; 0 <= --t && n.item(t) !== o;);
                 } while (t < 0 && (o = o.parentElement));
                 return o;
-            }), function() {
+            }), function () {
                 if ("function" == typeof window.CustomEvent) return;
                 function e(e, t) {
                     t = t || {
@@ -20,22 +20,22 @@
                     return n.initCustomEvent(e, t.bubbles, t.cancelable, t.detail), n;
                 }
                 e.prototype = window.Event.prototype, window.CustomEvent = e;
-            }(), function() {
-                for (var r = 0, e = [ "ms", "moz", "webkit", "o" ], t = 0; t < e.length && !window.requestAnimationFrame; ++t) window.requestAnimationFrame = window[e[t] + "RequestAnimationFrame"], 
-                window.cancelAnimationFrame = window[e[t] + "CancelAnimationFrame"] || window[e[t] + "CancelRequestAnimationFrame"];
-                window.requestAnimationFrame || (window.requestAnimationFrame = function(e, t) {
-                    var n = (new Date).getTime(), o = Math.max(0, 16 - (n - r)), a = window.setTimeout((function() {
+            }(), function () {
+                for (var r = 0, e = ["ms", "moz", "webkit", "o"], t = 0; t < e.length && !window.requestAnimationFrame; ++t) window.requestAnimationFrame = window[e[t] + "RequestAnimationFrame"],
+                    window.cancelAnimationFrame = window[e[t] + "CancelAnimationFrame"] || window[e[t] + "CancelRequestAnimationFrame"];
+                window.requestAnimationFrame || (window.requestAnimationFrame = function (e, t) {
+                    var n = (new Date).getTime(), o = Math.max(0, 16 - (n - r)), a = window.setTimeout((function () {
                         e(n + o);
                     }), o);
                     return r = n + o, a;
-                }), window.cancelAnimationFrame || (window.cancelAnimationFrame = function(e) {
+                }), window.cancelAnimationFrame || (window.cancelAnimationFrame = function (e) {
                     clearTimeout(e);
                 });
-            }(), function(e, t) {
-                true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
+            }(), function (e, t) {
+                true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
                     return t(e);
                 }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), void 0 !== __WEBPACK_AMD_DEFINE_RESULT__ && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : 0;
-            }("undefined" != typeof __webpack_require__.g ? __webpack_require__.g : "undefined" != typeof window ? window : this, (function(M) {
+            }("undefined" != typeof __webpack_require__.g ? __webpack_require__.g : "undefined" != typeof window ? window : this, (function (M) {
                 "use strict";
                 var q = {
                     ignore: "[data-scroll-ignore]",
@@ -52,30 +52,30 @@
                     updateURL: !0,
                     popstate: !0,
                     emitEvents: !0
-                }, I = function() {
+                }, I = function () {
                     var n = {};
-                    return Array.prototype.forEach.call(arguments, (function(e) {
+                    return Array.prototype.forEach.call(arguments, (function (e) {
                         for (var t in e) {
                             if (!e.hasOwnProperty(t)) return;
                             n[t] = e[t];
                         }
                     })), n;
-                }, r = function(e) {
+                }, r = function (e) {
                     "#" === e.charAt(0) && (e = e.substr(1));
-                    for (var t, n = String(e), o = n.length, a = -1, r = "", i = n.charCodeAt(0); ++a < o; ) {
+                    for (var t, n = String(e), o = n.length, a = -1, r = "", i = n.charCodeAt(0); ++a < o;) {
                         if (0 === (t = n.charCodeAt(a))) throw new InvalidCharacterError("Invalid character: the input contains U+0000.");
                         1 <= t && t <= 31 || 127 == t || 0 === a && 48 <= t && t <= 57 || 1 === a && 48 <= t && t <= 57 && 45 === i ? r += "\\" + t.toString(16) + " " : r += 128 <= t || 45 === t || 95 === t || 48 <= t && t <= 57 || 65 <= t && t <= 90 || 97 <= t && t <= 122 ? n.charAt(a) : "\\" + n.charAt(a);
                     }
                     return "#" + r;
-                }, F = function() {
+                }, F = function () {
                     return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight);
-                }, L = function(e) {
+                }, L = function (e) {
                     return e ? (t = e, parseInt(M.getComputedStyle(t).height, 10) + e.offsetTop) : 0;
                     var t;
-                }, x = function(e, t, n) {
-                    0 === e && document.body.focus(), n || (e.focus(), document.activeElement !== e && (e.setAttribute("tabindex", "-1"), 
-                    e.focus(), e.style.outline = "none"), M.scrollTo(0, t));
-                }, H = function(e, t, n, o) {
+                }, x = function (e, t, n) {
+                    0 === e && document.body.focus(), n || (e.focus(), document.activeElement !== e && (e.setAttribute("tabindex", "-1"),
+                        e.focus(), e.style.outline = "none"), M.scrollTo(0, t));
+                }, H = function (e, t, n, o) {
                     if (t.emitEvents && "function" == typeof M.CustomEvent) {
                         var a = new CustomEvent(e, {
                             bubbles: !0,
@@ -87,48 +87,48 @@
                         document.dispatchEvent(a);
                     }
                 };
-                return function(o, e) {
+                return function (o, e) {
                     var b, a, A, O, C = {};
-                    C.cancelScroll = function(e) {
+                    C.cancelScroll = function (e) {
                         cancelAnimationFrame(O), O = null, e || H("scrollCancel", b);
-                    }, C.animateScroll = function(a, r, e) {
+                    }, C.animateScroll = function (a, r, e) {
                         C.cancelScroll();
                         var i = I(b || q, e || {}), c = "[object Number]" === Object.prototype.toString.call(a), t = c || !a.tagName ? null : a;
                         if (c || t) {
                             var s = M.pageYOffset;
                             i.header && !A && (A = document.querySelector(i.header));
-                            var n, o, u, l, m, d, f, h, p = L(A), g = c ? a : function(e, t, n, o) {
+                            var n, o, u, l, m, d, f, h, p = L(A), g = c ? a : function (e, t, n, o) {
                                 var a = 0;
-                                if (e.offsetParent) for (;a += e.offsetTop, e = e.offsetParent; ) ;
-                                return a = Math.max(a - t - n, 0), o && (a = Math.min(a, F() - M.innerHeight)), 
-                                a;
-                            }(t, p, parseInt("function" == typeof i.offset ? i.offset(a, r) : i.offset, 10), i.clip), y = g - s, v = F(), w = 0, S = (n = y, 
-                            u = (o = i).speedAsDuration ? o.speed : Math.abs(n / 1e3 * o.speed), o.durationMax && u > o.durationMax ? o.durationMax : o.durationMin && u < o.durationMin ? o.durationMin : parseInt(u, 10)), E = function(e) {
-                                var t, n, o;
-                                l || (l = e), w += e - l, d = s + y * (n = m = 1 < (m = 0 === S ? 0 : w / S) ? 1 : m, 
-                                "easeInQuad" === (t = i).easing && (o = n * n), "easeOutQuad" === t.easing && (o = n * (2 - n)), 
-                                "easeInOutQuad" === t.easing && (o = n < .5 ? 2 * n * n : (4 - 2 * n) * n - 1), 
-                                "easeInCubic" === t.easing && (o = n * n * n), "easeOutCubic" === t.easing && (o = --n * n * n + 1), 
-                                "easeInOutCubic" === t.easing && (o = n < .5 ? 4 * n * n * n : (n - 1) * (2 * n - 2) * (2 * n - 2) + 1), 
-                                "easeInQuart" === t.easing && (o = n * n * n * n), "easeOutQuart" === t.easing && (o = 1 - --n * n * n * n), 
-                                "easeInOutQuart" === t.easing && (o = n < .5 ? 8 * n * n * n * n : 1 - 8 * --n * n * n * n), 
-                                "easeInQuint" === t.easing && (o = n * n * n * n * n), "easeOutQuint" === t.easing && (o = 1 + --n * n * n * n * n), 
-                                "easeInOutQuint" === t.easing && (o = n < .5 ? 16 * n * n * n * n * n : 1 + 16 * --n * n * n * n * n), 
-                                t.customEasing && (o = t.customEasing(n)), o || n), M.scrollTo(0, Math.floor(d)), 
-                                function(e, t) {
-                                    var n = M.pageYOffset;
-                                    if (e == t || n == t || (s < t && M.innerHeight + n) >= v) return C.cancelScroll(!0), 
-                                    x(a, t, c), H("scrollStop", i, a, r), !(O = l = null);
-                                }(d, g) || (O = M.requestAnimationFrame(E), l = e);
-                            };
+                                if (e.offsetParent) for (; a += e.offsetTop, e = e.offsetParent;);
+                                return a = Math.max(a - t - n, 0), o && (a = Math.min(a, F() - M.innerHeight)),
+                                    a;
+                            }(t, p, parseInt("function" == typeof i.offset ? i.offset(a, r) : i.offset, 10), i.clip), y = g - s, v = F(), w = 0, S = (n = y,
+                                u = (o = i).speedAsDuration ? o.speed : Math.abs(n / 1e3 * o.speed), o.durationMax && u > o.durationMax ? o.durationMax : o.durationMin && u < o.durationMin ? o.durationMin : parseInt(u, 10)), E = function (e) {
+                                    var t, n, o;
+                                    l || (l = e), w += e - l, d = s + y * (n = m = 1 < (m = 0 === S ? 0 : w / S) ? 1 : m,
+                                        "easeInQuad" === (t = i).easing && (o = n * n), "easeOutQuad" === t.easing && (o = n * (2 - n)),
+                                        "easeInOutQuad" === t.easing && (o = n < .5 ? 2 * n * n : (4 - 2 * n) * n - 1),
+                                        "easeInCubic" === t.easing && (o = n * n * n), "easeOutCubic" === t.easing && (o = --n * n * n + 1),
+                                        "easeInOutCubic" === t.easing && (o = n < .5 ? 4 * n * n * n : (n - 1) * (2 * n - 2) * (2 * n - 2) + 1),
+                                        "easeInQuart" === t.easing && (o = n * n * n * n), "easeOutQuart" === t.easing && (o = 1 - --n * n * n * n),
+                                        "easeInOutQuart" === t.easing && (o = n < .5 ? 8 * n * n * n * n : 1 - 8 * --n * n * n * n),
+                                        "easeInQuint" === t.easing && (o = n * n * n * n * n), "easeOutQuint" === t.easing && (o = 1 + --n * n * n * n * n),
+                                        "easeInOutQuint" === t.easing && (o = n < .5 ? 16 * n * n * n * n * n : 1 + 16 * --n * n * n * n * n),
+                                        t.customEasing && (o = t.customEasing(n)), o || n), M.scrollTo(0, Math.floor(d)),
+                                        function (e, t) {
+                                            var n = M.pageYOffset;
+                                            if (e == t || n == t || (s < t && M.innerHeight + n) >= v) return C.cancelScroll(!0),
+                                                x(a, t, c), H("scrollStop", i, a, r), !(O = l = null);
+                                        }(d, g) || (O = M.requestAnimationFrame(E), l = e);
+                                };
                             0 === M.pageYOffset && M.scrollTo(0, 0), f = a, h = i, c || history.pushState && h.updateURL && history.pushState({
                                 smoothScroll: JSON.stringify(h),
                                 anchor: f.id
-                            }, document.title, f === document.documentElement ? "#top" : "#" + f.id), "matchMedia" in M && M.matchMedia("(prefers-reduced-motion)").matches ? x(a, Math.floor(g), !1) : (H("scrollStart", i, a, r), 
-                            C.cancelScroll(!0), M.requestAnimationFrame(E));
+                            }, document.title, f === document.documentElement ? "#top" : "#" + f.id), "matchMedia" in M && M.matchMedia("(prefers-reduced-motion)").matches ? x(a, Math.floor(g), !1) : (H("scrollStart", i, a, r),
+                                C.cancelScroll(!0), M.requestAnimationFrame(E));
                         }
                     };
-                    var t = function(e) {
+                    var t = function (e) {
                         if (!e.defaultPrevented && !(0 !== e.button || e.metaKey || e.ctrlKey || e.shiftKey) && "closest" in e.target && (a = e.target.closest(o)) && "a" === a.tagName.toLowerCase() && !e.target.closest(b.ignore) && a.hostname === M.location.hostname && a.pathname === M.location.pathname && /#/.test(a.href)) {
                             var t, n;
                             try {
@@ -140,7 +140,7 @@
                                 if (!b.topOnEmptyHash) return;
                                 n = document.documentElement;
                             } else n = document.querySelector(t);
-                            (n = n || "#top" !== t ? n : document.documentElement) && (e.preventDefault(), function(e) {
+                            (n = n || "#top" !== t ? n : document.documentElement) && (e.preventDefault(), function (e) {
                                 if (history.replaceState && e.updateURL && !history.state) {
                                     var t = M.location.hash;
                                     t = t || "", history.replaceState({
@@ -150,7 +150,7 @@
                                 }
                             }(b), C.animateScroll(n, a));
                         }
-                    }, n = function(e) {
+                    }, n = function (e) {
                         if (null !== history.state && history.state.smoothScroll && history.state.smoothScroll === JSON.stringify(b)) {
                             var t = history.state.anchor;
                             "string" == typeof t && t && !(t = document.querySelector(r(history.state.anchor))) || C.animateScroll(t, null, {
@@ -158,14 +158,14 @@
                             });
                         }
                     };
-                    C.destroy = function() {
-                        b && (document.removeEventListener("click", t, !1), M.removeEventListener("popstate", n, !1), 
-                        C.cancelScroll(), O = A = a = b = null);
+                    C.destroy = function () {
+                        b && (document.removeEventListener("click", t, !1), M.removeEventListener("popstate", n, !1),
+                            C.cancelScroll(), O = A = a = b = null);
                     };
-                    return function() {
+                    return function () {
                         if (!("querySelector" in document && "addEventListener" in M && "requestAnimationFrame" in M && "closest" in M.Element.prototype)) throw "Smooth Scroll: This browser does not support the required JavaScript methods and browser APIs.";
-                        C.destroy(), b = I(q, e || {}), A = b.header ? document.querySelector(b.header) : null, 
-                        document.addEventListener("click", t, !1), b.updateURL && b.popstate && M.addEventListener("popstate", n, !1);
+                        C.destroy(), b = I(q, e || {}), A = b.header ? document.querySelector(b.header) : null,
+                            document.addEventListener("click", t, !1), b.updateURL && b.popstate && M.addEventListener("popstate", n, !1);
                     }(), C;
                 };
             }));
@@ -182,7 +182,7 @@
         return module.exports;
     }
     (() => {
-        __webpack_require__.g = function() {
+        __webpack_require__.g = function () {
             if ("object" === typeof globalThis) return globalThis;
             try {
                 return this || new Function("return this")();
@@ -197,12 +197,12 @@
         function isWebp() {
             function testWebP(callback) {
                 let webP = new Image;
-                webP.onload = webP.onerror = function() {
+                webP.onload = webP.onerror = function () {
                     callback(2 == webP.height);
                 };
                 webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
             }
-            testWebP((function(support) {
+            testWebP((function (support) {
                 let className = true === support ? "webp" : "no-webp";
                 document.documentElement.classList.add(className);
             }));
@@ -296,7 +296,7 @@
                     document.documentElement.classList.remove("lock");
                 }), delay);
                 bodyLockStatus = false;
-                setTimeout((function() {
+                setTimeout((function () {
                     bodyLockStatus = true;
                 }), delay);
             }
@@ -312,7 +312,7 @@
                 body.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
                 document.documentElement.classList.add("lock");
                 bodyLockStatus = false;
-                setTimeout((function() {
+                setTimeout((function () {
                     bodyLockStatus = true;
                 }), delay);
             }
@@ -320,13 +320,13 @@
         function spollers() {
             const spollersArray = document.querySelectorAll("[data-spollers]");
             if (spollersArray.length > 0) {
-                const spollersRegular = Array.from(spollersArray).filter((function(item, index, self) {
+                const spollersRegular = Array.from(spollersArray).filter((function (item, index, self) {
                     return !item.dataset.spollers.split(",")[0];
                 }));
                 if (spollersRegular.length) initSpollers(spollersRegular);
                 let mdQueriesArray = dataMediaQueries(spollersArray, "spollers");
                 if (mdQueriesArray && mdQueriesArray.length) mdQueriesArray.forEach((mdQueriesItem => {
-                    mdQueriesItem.matchMedia.addEventListener("change", (function() {
+                    mdQueriesItem.matchMedia.addEventListener("change", (function () {
                         initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
                     }));
                     initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
@@ -384,7 +384,7 @@
                     }
                 }
                 const spollersClose = document.querySelectorAll("[data-spoller-close]");
-                if (spollersClose.length) document.addEventListener("click", (function(e) {
+                if (spollersClose.length) document.addEventListener("click", (function (e) {
                     const el = e.target;
                     if (!el.closest("[data-spollers]")) spollersClose.forEach((spollerClose => {
                         const spollersBlock = spollerClose.closest("[data-spollers]");
@@ -398,7 +398,7 @@
             }
         }
         function menuInit() {
-            if (document.querySelector(".icon-menu")) document.addEventListener("click", (function(e) {
+            if (document.querySelector(".icon-menu")) document.addEventListener("click", (function (e) {
                 if (bodyLockStatus && e.target.closest(".icon-menu")) {
                     bodyLockToggle();
                     document.documentElement.classList.toggle("menu-open");
@@ -410,12 +410,12 @@
             document.documentElement.classList.remove("menu-open");
         }
         function showMore() {
-            window.addEventListener("load", (function(e) {
+            window.addEventListener("load", (function (e) {
                 const showMoreBlocks = document.querySelectorAll("[data-showmore]");
                 let showMoreBlocksRegular;
                 let mdQueriesArray;
                 if (showMoreBlocks.length) {
-                    showMoreBlocksRegular = Array.from(showMoreBlocks).filter((function(item, index, self) {
+                    showMoreBlocksRegular = Array.from(showMoreBlocks).filter((function (item, index, self) {
                         return !item.dataset.showmoreMedia;
                     }));
                     showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
@@ -424,7 +424,7 @@
                     mdQueriesArray = dataMediaQueries(showMoreBlocks, "showmoreMedia");
                     if (mdQueriesArray && mdQueriesArray.length) {
                         mdQueriesArray.forEach((mdQueriesItem => {
-                            mdQueriesItem.matchMedia.addEventListener("change", (function() {
+                            mdQueriesItem.matchMedia.addEventListener("change", (function () {
                                 initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
                             }));
                         }));
@@ -499,17 +499,33 @@
                             const itemWrapper = showMoreButton.closest(".project-item");
                             const showMoreContent = showMoreBlock.querySelector("[data-showmore-content]");
                             const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : "500";
-                            const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
+                            let hiddenHeight = getHeight(showMoreBlock, showMoreContent);
                             if (!showMoreContent.classList.contains("_slide")) {
-                                showMoreBlock.classList.contains("_showmore-active") ? _slideUp(showMoreContent, showMoreSpeed, hiddenHeight) : _slideDown(showMoreContent, showMoreSpeed, hiddenHeight);
                                 showMoreBlock.classList.toggle("_showmore-active");
-                                itemWrapper.classList.toggle("showmored");
+                                if (itemWrapper) {
+                                    itemWrapper.classList.toggle("showmored");
+                                    if (!itemWrapper.classList.contains("showmored")) {
+                                        hiddenHeight = getHeight(showMoreBlock, showMoreContent);
+                                        _slideUp(showMoreContent, showMoreSpeed, hiddenHeight);
+
+                                    } else {
+                                        _slideDown(showMoreContent, showMoreSpeed, hiddenHeight);
+                                    }
+                                } else {
+                                    showMoreBlock.classList.toggle("_showmore-active");
+                                    showMoreBlock.classList.contains("_showmore-active") ? _slideUp(showMoreContent, showMoreSpeed, hiddenHeight) : _slideDown(showMoreContent, showMoreSpeed, hiddenHeight);
+                                    showMoreBlock.classList.toggle("_showmore-active");
+                                }
+
+
+
                             }
                         }
-                    } else if ("resize" === targetType) {
-                        showMoreBlocksRegular && showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
-                        mdQueriesArray && mdQueriesArray.length ? initItemsMedia(mdQueriesArray) : null;
                     }
+                    // else if ("resize" === targetType) {
+                    //     showMoreBlocksRegular && showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
+                    //     mdQueriesArray && mdQueriesArray.length ? initItemsMedia(mdQueriesArray) : null;
+                    // }
                 }
             }));
         }
@@ -519,12 +535,12 @@
             }), 0);
         }
         function uniqArray(array) {
-            return array.filter((function(item, index, self) {
+            return array.filter((function (item, index, self) {
                 return self.indexOf(item) === index;
             }));
         }
         function dataMediaQueries(array, dataSetValue) {
-            const media = Array.from(array).filter((function(item, index, self) {
+            const media = Array.from(array).filter((function (item, index, self) {
                 if (item.dataset[dataSetValue]) return item.dataset[dataSetValue].split(",")[0];
             }));
             if (media.length) {
@@ -538,7 +554,7 @@
                     breakpoint.item = item;
                     breakpointsArray.push(breakpoint);
                 }));
-                let mdQueries = breakpointsArray.map((function(item) {
+                let mdQueries = breakpointsArray.map((function (item) {
                     return "(" + item.type + "-width: " + item.value + "px)," + item.value + "," + item.type;
                 }));
                 mdQueries = uniqArray(mdQueries);
@@ -549,7 +565,7 @@
                         const mediaBreakpoint = paramsArray[1];
                         const mediaType = paramsArray[2];
                         const matchMedia = window.matchMedia(paramsArray[0]);
-                        const itemsArray = breakpointsArray.filter((function(item) {
+                        const itemsArray = breakpointsArray.filter((function (item) {
                             if (item.value === mediaBreakpoint && item.type === mediaType) return true;
                         }));
                         mdQueriesArray.push({
@@ -586,10 +602,10 @@
                         goHash: true
                     },
                     on: {
-                        beforeOpen: function() {},
-                        afterOpen: function() {},
-                        beforeClose: function() {},
-                        afterClose: function() {}
+                        beforeOpen: function () { },
+                        afterOpen: function () { },
+                        beforeClose: function () { },
+                        afterClose: function () { }
                     }
                 };
                 this.youTubeCode;
@@ -611,7 +627,7 @@
                 this._reopen = false;
                 this._selectorOpen = false;
                 this.lastFocusEl = false;
-                this._focusEl = [ "a[href]", 'input:not([disabled]):not([type="hidden"]):not([aria-hidden])', "button:not([disabled]):not([aria-hidden])", "select:not([disabled]):not([aria-hidden])", "textarea:not([disabled]):not([aria-hidden])", "area[href]", "iframe", "object", "embed", "[contenteditable]", '[tabindex]:not([tabindex^="-"])' ];
+                this._focusEl = ["a[href]", 'input:not([disabled]):not([type="hidden"]):not([aria-hidden])', "button:not([disabled]):not([aria-hidden])", "select:not([disabled]):not([aria-hidden])", "textarea:not([disabled]):not([aria-hidden])", "area[href]", "iframe", "object", "embed", "[contenteditable]", '[tabindex]:not([tabindex^="-"])'];
                 this.options = {
                     ...config,
                     ...options,
@@ -636,7 +652,7 @@
                 this.eventsPopup();
             }
             eventsPopup() {
-                document.addEventListener("click", function(e) {
+                document.addEventListener("click", function (e) {
                     const buttonOpen = e.target.closest(`[${this.options.attributeOpenButton}]`);
                     if (buttonOpen) {
                         e.preventDefault();
@@ -658,7 +674,7 @@
                         return;
                     }
                 }.bind(this));
-                document.addEventListener("keydown", function(e) {
+                document.addEventListener("keydown", function (e) {
                     if (this.options.closeEsc && 27 == e.which && "Escape" === e.code && this.isOpen) {
                         e.preventDefault();
                         this.close();
@@ -670,10 +686,10 @@
                     }
                 }.bind(this));
                 if (this.options.hashSettings.goHash) {
-                    window.addEventListener("hashchange", function() {
+                    window.addEventListener("hashchange", function () {
                         if (window.location.hash) this._openToHash(); else this.close(this.targetOpen.selector);
                     }.bind(this));
-                    window.addEventListener("load", function() {
+                    window.addEventListener("load", function () {
                         if (window.location.hash) this._openToHash();
                     }.bind(this));
                 }
@@ -846,10 +862,10 @@
         }
         const ssrDocument = {
             body: {},
-            addEventListener() {},
-            removeEventListener() {},
+            addEventListener() { },
+            removeEventListener() { },
             activeElement: {
-                blur() {},
+                blur() { },
                 nodeName: ""
             },
             querySelector() {
@@ -863,7 +879,7 @@
             },
             createEvent() {
                 return {
-                    initEvent() {}
+                    initEvent() { }
                 };
             },
             createElement() {
@@ -871,7 +887,7 @@
                     children: [],
                     childNodes: [],
                     style: {},
-                    setAttribute() {},
+                    setAttribute() { },
                     getElementsByTagName() {
                         return [];
                     }
@@ -915,16 +931,16 @@
                 search: ""
             },
             history: {
-                replaceState() {},
-                pushState() {},
-                go() {},
-                back() {}
+                replaceState() { },
+                pushState() { },
+                go() { },
+                back() { }
             },
             CustomEvent: function CustomEvent() {
                 return this;
             },
-            addEventListener() {},
-            removeEventListener() {},
+            addEventListener() { },
+            removeEventListener() { },
             getComputedStyle() {
                 return {
                     getPropertyValue() {
@@ -932,11 +948,11 @@
                     }
                 };
             },
-            Image() {},
-            Date() {},
+            Image() { },
+            Date() { },
             screen: {},
-            setTimeout() {},
-            clearTimeout() {},
+            setTimeout() { },
+            clearTimeout() { },
             matchMedia() {
                 return {};
             },
@@ -992,7 +1008,7 @@
             return uniqueArray;
         }
         function qsa(selector, context) {
-            if ("string" !== typeof selector) return [ selector ];
+            if ("string" !== typeof selector) return [selector];
             const a = [];
             const res = context.querySelectorAll(selector);
             for (let i = 0; i < res.length; i += 1) a.push(res[i]);
@@ -1246,7 +1262,7 @@
         function each(callback) {
             if (!callback) return this;
             this.forEach(((el, index) => {
-                callback.apply(el, [ el, index ]);
+                callback.apply(el, [el, index]);
             }));
             return this;
         }
@@ -1282,7 +1298,7 @@
             if (selector === document) return el === document;
             if (selector === window) return el === window;
             if (selector.nodeType || selector instanceof Dom7) {
-                compareWith = selector.nodeType ? [ selector ] : selector;
+                compareWith = selector.nodeType ? [selector] : selector;
                 for (i = 0; i < compareWith.length; i += 1) if (compareWith[i] === el) return true;
                 return false;
             }
@@ -1305,9 +1321,9 @@
             if (index < 0) {
                 const returnIndex = length + index;
                 if (returnIndex < 0) return dom7_esm_$([]);
-                return dom7_esm_$([ this[returnIndex] ]);
+                return dom7_esm_$([this[returnIndex]]);
             }
-            return dom7_esm_$([ this[index] ]);
+            return dom7_esm_$([this[index]]);
         }
         function append(...els) {
             let newChild;
@@ -1336,10 +1352,10 @@
         function next(selector) {
             if (this.length > 0) {
                 if (selector) {
-                    if (this[0].nextElementSibling && dom7_esm_$(this[0].nextElementSibling).is(selector)) return dom7_esm_$([ this[0].nextElementSibling ]);
+                    if (this[0].nextElementSibling && dom7_esm_$(this[0].nextElementSibling).is(selector)) return dom7_esm_$([this[0].nextElementSibling]);
                     return dom7_esm_$([]);
                 }
-                if (this[0].nextElementSibling) return dom7_esm_$([ this[0].nextElementSibling ]);
+                if (this[0].nextElementSibling) return dom7_esm_$([this[0].nextElementSibling]);
                 return dom7_esm_$([]);
             }
             return dom7_esm_$([]);
@@ -1361,10 +1377,10 @@
             if (this.length > 0) {
                 const el = this[0];
                 if (selector) {
-                    if (el.previousElementSibling && dom7_esm_$(el.previousElementSibling).is(selector)) return dom7_esm_$([ el.previousElementSibling ]);
+                    if (el.previousElementSibling && dom7_esm_$(el.previousElementSibling).is(selector)) return dom7_esm_$([el.previousElementSibling]);
                     return dom7_esm_$([]);
                 }
-                if (el.previousElementSibling) return dom7_esm_$([ el.previousElementSibling ]);
+                if (el.previousElementSibling) return dom7_esm_$([el.previousElementSibling]);
                 return dom7_esm_$([]);
             }
             return dom7_esm_$([]);
@@ -1511,10 +1527,10 @@
             Object.keys(object).forEach((key => {
                 try {
                     object[key] = null;
-                } catch (e) {}
+                } catch (e) { }
                 try {
                     delete object[key];
-                } catch (e) {}
+                } catch (e) { }
             }));
         }
         function utils_nextTick(callback, delay) {
@@ -1560,7 +1576,7 @@
         }
         function utils_extend() {
             const to = Object(arguments.length <= 0 ? void 0 : arguments[0]);
-            const noExtend = [ "__proto__", "constructor", "prototype" ];
+            const noExtend = ["__proto__", "constructor", "prototype"];
             for (let i = 1; i < arguments.length; i += 1) {
                 const nextSource = i < 0 || arguments.length <= i ? void 0 : arguments[i];
                 if (void 0 !== nextSource && null !== nextSource && !isNode(nextSource)) {
@@ -1581,7 +1597,7 @@
             el.style.setProperty(varName, varValue);
         }
         function animateCSSModeScroll(_ref) {
-            let {swiper, targetPosition, side} = _ref;
+            let { swiper, targetPosition, side } = _ref;
             const window = ssr_window_esm_getWindow();
             const startPosition = -swiper.translate;
             let startTime = null;
@@ -1633,7 +1649,7 @@
                             }
                         });
                         window.addEventListener("testPassiveListener", null, opts);
-                    } catch (e) {}
+                    } catch (e) { }
                     return supportsPassive;
                 }(),
                 gestures: function checkGestures() {
@@ -1647,7 +1663,7 @@
         }
         let deviceCached;
         function calcDevice(_temp) {
-            let {userAgent} = void 0 === _temp ? {} : _temp;
+            let { userAgent } = void 0 === _temp ? {} : _temp;
             const support = getSupport();
             const window = ssr_window_esm_getWindow();
             const platform = window.navigator.platform;
@@ -1664,10 +1680,10 @@
             const iphone = !ipad && ua.match(/(iPhone\sOS|iOS)\s([\d_]+)/);
             const windows = "Win32" === platform;
             let macos = "MacIntel" === platform;
-            const iPadScreens = [ "1024x1366", "1366x1024", "834x1194", "1194x834", "834x1112", "1112x834", "768x1024", "1024x768", "820x1180", "1180x820", "810x1080", "1080x810" ];
+            const iPadScreens = ["1024x1366", "1366x1024", "834x1194", "1194x834", "834x1112", "1112x834", "768x1024", "1024x768", "820x1180", "1180x820", "810x1080", "1080x810"];
             if (!ipad && macos && support.touch && iPadScreens.indexOf(`${screenWidth}x${screenHeight}`) >= 0) {
                 ipad = ua.match(/(Version)\/([\d.]+)/);
-                if (!ipad) ipad = [ 0, 1, "13_0_0" ];
+                if (!ipad) ipad = [0, 1, "13_0_0"];
                 macos = false;
             }
             if (android && !windows) {
@@ -1702,7 +1718,7 @@
             return browser;
         }
         function Resize(_ref) {
-            let {swiper, on, emit} = _ref;
+            let { swiper, on, emit } = _ref;
             const window = ssr_window_esm_getWindow();
             let observer = null;
             let animationFrame = null;
@@ -1715,11 +1731,11 @@
                 if (!swiper || swiper.destroyed || !swiper.initialized) return;
                 observer = new ResizeObserver((entries => {
                     animationFrame = window.requestAnimationFrame((() => {
-                        const {width, height} = swiper;
+                        const { width, height } = swiper;
                         let newWidth = width;
                         let newHeight = height;
                         entries.forEach((_ref2 => {
-                            let {contentBoxSize, contentRect, target} = _ref2;
+                            let { contentBoxSize, contentRect, target } = _ref2;
                             if (target && target !== swiper.el) return;
                             newWidth = contentRect ? contentRect.width : (contentBoxSize[0] || contentBoxSize).inlineSize;
                             newHeight = contentRect ? contentRect.height : (contentBoxSize[0] || contentBoxSize).blockSize;
@@ -1755,10 +1771,10 @@
             }));
         }
         function Observer(_ref) {
-            let {swiper, extendParams, on, emit} = _ref;
+            let { swiper, extendParams, on, emit } = _ref;
             const observers = [];
             const window = ssr_window_esm_getWindow();
-            const attach = function(target, options) {
+            const attach = function (target, options) {
                 if (void 0 === options) options = {};
                 const ObserverFunc = window.MutationObserver || window.WebkitMutationObserver;
                 const observer = new ObserverFunc((mutations => {
@@ -1878,7 +1894,7 @@
                 const eventsArray = Array.isArray(events) ? events : events.split(" ");
                 eventsArray.forEach((event => {
                     if (self.eventsAnyListeners && self.eventsAnyListeners.length) self.eventsAnyListeners.forEach((eventHandler => {
-                        eventHandler.apply(context, [ event, ...data ]);
+                        eventHandler.apply(context, [event, ...data]);
                     }));
                     if (self.eventsListeners && self.eventsListeners[event]) self.eventsListeners[event].forEach((eventHandler => {
                         eventHandler.apply(context, data);
@@ -1924,7 +1940,7 @@
                 return parseFloat(node.getPropertyValue(getDirectionLabel(label)) || 0);
             }
             const params = swiper.params;
-            const {$wrapperEl, size: swiperSize, rtlTranslate: rtl, wrongRTL} = swiper;
+            const { $wrapperEl, size: swiperSize, rtlTranslate: rtl, wrongRTL } = swiper;
             const isVirtual = swiper.virtual && params.virtual.enabled;
             const previousSlidesLength = isVirtual ? swiper.virtual.slides.length : swiper.slides.length;
             const slides = $wrapperEl.children(`.${swiper.params.slideClass}`);
@@ -1982,7 +1998,7 @@
                         const marginRight = getDirectionPropertyValue(slideStyles, "margin-right");
                         const boxSizing = slideStyles.getPropertyValue("box-sizing");
                         if (boxSizing && "border-box" === boxSizing) slideSize = width + marginLeft + marginRight; else {
-                            const {clientWidth, offsetWidth} = slide[0];
+                            const { clientWidth, offsetWidth } = slide[0];
                             slideSize = width + paddingLeft + paddingRight + marginLeft + marginRight + (offsetWidth - clientWidth);
                         }
                     }
@@ -2032,7 +2048,7 @@
                 snapGrid = newSlidesGrid;
                 if (Math.floor(swiper.virtualSize - swiperSize) - Math.floor(snapGrid[snapGrid.length - 1]) > 1) snapGrid.push(swiper.virtualSize - swiperSize);
             }
-            if (0 === snapGrid.length) snapGrid = [ 0 ];
+            if (0 === snapGrid.length) snapGrid = [0];
             if (0 !== params.spaceBetween) {
                 const key = swiper.isHorizontal() && rtl ? "marginLeft" : getDirectionLabel("marginRight");
                 slides.filter(((_, slideIndex) => {
@@ -2134,7 +2150,7 @@
             if (void 0 === translate) translate = this && this.translate || 0;
             const swiper = this;
             const params = swiper.params;
-            const {slides, rtlTranslate: rtl, snapGrid} = swiper;
+            const { slides, rtlTranslate: rtl, snapGrid } = swiper;
             if (0 === slides.length) return;
             if ("undefined" === typeof slides[0].swiperSlideOffset) swiper.updateSlidesOffset();
             let offsetCenter = -translate;
@@ -2169,7 +2185,7 @@
             }
             const params = swiper.params;
             const translatesDiff = swiper.maxTranslate() - swiper.minTranslate();
-            let {progress, isBeginning, isEnd} = swiper;
+            let { progress, isBeginning, isEnd } = swiper;
             const wasBeginning = isBeginning;
             const wasEnd = isEnd;
             if (0 === translatesDiff) {
@@ -2194,7 +2210,7 @@
         }
         function updateSlidesClasses() {
             const swiper = this;
-            const {slides, params, $wrapperEl, activeIndex, realIndex} = swiper;
+            const { slides, params, $wrapperEl, activeIndex, realIndex } = swiper;
             const isVirtual = swiper.virtual && params.virtual.enabled;
             slides.removeClass(`${params.slideActiveClass} ${params.slideNextClass} ${params.slidePrevClass} ${params.slideDuplicateActiveClass} ${params.slideDuplicateNextClass} ${params.slideDuplicatePrevClass}`);
             let activeSlide;
@@ -2220,7 +2236,7 @@
         function updateActiveIndex(newActiveIndex) {
             const swiper = this;
             const translate = swiper.rtlTranslate ? swiper.translate : -swiper.translate;
-            const {slidesGrid, snapGrid, params, activeIndex: previousIndex, realIndex: previousRealIndex, snapIndex: previousSnapIndex} = swiper;
+            const { slidesGrid, snapGrid, params, activeIndex: previousIndex, realIndex: previousRealIndex, snapIndex: previousSnapIndex } = swiper;
             let activeIndex = newActiveIndex;
             let snapIndex;
             if ("undefined" === typeof activeIndex) {
@@ -2288,7 +2304,7 @@
         function getSwiperTranslate(axis) {
             if (void 0 === axis) axis = this.isHorizontal() ? "x" : "y";
             const swiper = this;
-            const {params, rtlTranslate: rtl, translate, $wrapperEl} = swiper;
+            const { params, rtlTranslate: rtl, translate, $wrapperEl } = swiper;
             if (params.virtualTranslate) return rtl ? -translate : translate;
             if (params.cssMode) return translate;
             let currentTranslate = utils_getTranslate($wrapperEl[0], axis);
@@ -2297,7 +2313,7 @@
         }
         function setTranslate(translate, byController) {
             const swiper = this;
-            const {rtlTranslate: rtl, params, $wrapperEl, wrapperEl, progress} = swiper;
+            const { rtlTranslate: rtl, params, $wrapperEl, wrapperEl, progress } = swiper;
             let x = 0;
             let y = 0;
             const z = 0;
@@ -2327,7 +2343,7 @@
             if (void 0 === runCallbacks) runCallbacks = true;
             if (void 0 === translateBounds) translateBounds = true;
             const swiper = this;
-            const {params, wrapperEl} = swiper;
+            const { params, wrapperEl } = swiper;
             if (swiper.animating && params.preventInteractionOnTransition) return false;
             const minTranslate = swiper.minTranslate();
             const maxTranslate = swiper.maxTranslate();
@@ -2396,8 +2412,8 @@
             swiper.emit("setTransition", duration, byController);
         }
         function transitionEmit(_ref) {
-            let {swiper, runCallbacks, direction, step} = _ref;
-            const {activeIndex, previousIndex} = swiper;
+            let { swiper, runCallbacks, direction, step } = _ref;
+            const { activeIndex, previousIndex } = swiper;
             let dir = direction;
             if (!dir) if (activeIndex > previousIndex) dir = "next"; else if (activeIndex < previousIndex) dir = "prev"; else dir = "reset";
             swiper.emit(`transition${step}`);
@@ -2413,7 +2429,7 @@
         function transitionStart(runCallbacks, direction) {
             if (void 0 === runCallbacks) runCallbacks = true;
             const swiper = this;
-            const {params} = swiper;
+            const { params } = swiper;
             if (params.cssMode) return;
             if (params.autoHeight) swiper.updateAutoHeight();
             transitionEmit({
@@ -2426,7 +2442,7 @@
         function transitionEnd_transitionEnd(runCallbacks, direction) {
             if (void 0 === runCallbacks) runCallbacks = true;
             const swiper = this;
-            const {params} = swiper;
+            const { params } = swiper;
             swiper.animating = false;
             if (params.cssMode) return;
             swiper.setTransition(0);
@@ -2456,7 +2472,7 @@
             const swiper = this;
             let slideIndex = index;
             if (slideIndex < 0) slideIndex = 0;
-            const {params, snapGrid, slidesGrid, previousIndex, activeIndex, rtlTranslate: rtl, wrapperEl, enabled} = swiper;
+            const { params, snapGrid, slidesGrid, previousIndex, activeIndex, rtlTranslate: rtl, wrapperEl, enabled } = swiper;
             if (swiper.animating && params.preventInteractionOnTransition || !enabled && !internal && !initial) return false;
             const skip = Math.min(swiper.params.slidesPerGroupSkip, slideIndex);
             let snapIndex = skip + Math.floor((slideIndex - skip) / swiper.params.slidesPerGroup);
@@ -2554,7 +2570,7 @@
             if (void 0 === speed) speed = this.params.speed;
             if (void 0 === runCallbacks) runCallbacks = true;
             const swiper = this;
-            const {animating, enabled, params} = swiper;
+            const { animating, enabled, params } = swiper;
             if (!enabled) return swiper;
             let perGroup = params.slidesPerGroup;
             if ("auto" === params.slidesPerView && 1 === params.slidesPerGroup && params.slidesPerGroupAuto) perGroup = Math.max(swiper.slidesPerViewDynamic("current", true), 1);
@@ -2571,7 +2587,7 @@
             if (void 0 === speed) speed = this.params.speed;
             if (void 0 === runCallbacks) runCallbacks = true;
             const swiper = this;
-            const {params, animating, snapGrid, slidesGrid, rtlTranslate, enabled} = swiper;
+            const { params, animating, snapGrid, slidesGrid, rtlTranslate, enabled } = swiper;
             if (!enabled) return swiper;
             if (params.loop) {
                 if (animating && params.loopPreventsSlide) return false;
@@ -2638,7 +2654,7 @@
         }
         function slideToClickedSlide() {
             const swiper = this;
-            const {params, $wrapperEl} = swiper;
+            const { params, $wrapperEl } = swiper;
             const slidesPerView = "auto" === params.slidesPerView ? swiper.slidesPerViewDynamic() : params.slidesPerView;
             let slideToIndex = swiper.clickedIndex;
             let realIndex;
@@ -2672,7 +2688,7 @@
         function loopCreate() {
             const swiper = this;
             const document = ssr_window_esm_getDocument();
-            const {params, $wrapperEl} = swiper;
+            const { params, $wrapperEl } = swiper;
             const $selector = $wrapperEl.children().length > 0 ? dom($wrapperEl.children()[0].parentNode) : $wrapperEl;
             $selector.children(`.${params.slideClass}.${params.slideDuplicateClass}`).remove();
             let slides = $selector.children(`.${params.slideClass}`);
@@ -2704,7 +2720,7 @@
         function loopFix() {
             const swiper = this;
             swiper.emit("beforeLoopFix");
-            const {activeIndex, slides, loopedSlides, allowSlidePrev, allowSlideNext, snapGrid, rtlTranslate: rtl} = swiper;
+            const { activeIndex, slides, loopedSlides, allowSlidePrev, allowSlideNext, snapGrid, rtlTranslate: rtl } = swiper;
             let newIndex;
             swiper.allowSlidePrev = true;
             swiper.allowSlideNext = true;
@@ -2727,7 +2743,7 @@
         }
         function loopDestroy() {
             const swiper = this;
-            const {$wrapperEl, params, slides} = swiper;
+            const { $wrapperEl, params, slides } = swiper;
             $wrapperEl.children(`.${params.slideClass}.${params.slideDuplicateClass},.${params.slideClass}.${params.slideBlankClass}`).remove();
             slides.removeAttr("data-swiper-slide-index");
         }
@@ -2768,7 +2784,7 @@
             const document = ssr_window_esm_getDocument();
             const window = ssr_window_esm_getWindow();
             const data = swiper.touchEventsData;
-            const {params, touches, enabled} = swiper;
+            const { params, touches, enabled } = swiper;
             if (!enabled) return;
             if (swiper.animating && params.preventInteractionOnTransition) return;
             if (!swiper.animating && params.cssMode && params.loop) swiper.loopFix();
@@ -2827,7 +2843,7 @@
             const document = ssr_window_esm_getDocument();
             const swiper = this;
             const data = swiper.touchEventsData;
-            const {params, touches, rtlTranslate: rtl, enabled} = swiper;
+            const { params, touches, rtlTranslate: rtl, enabled } = swiper;
             if (!enabled) return;
             let e = event;
             if (e.originalEvent) e = e.originalEvent;
@@ -2949,7 +2965,7 @@
         function onTouchEnd(event) {
             const swiper = this;
             const data = swiper.touchEventsData;
-            const {params, touches, rtlTranslate: rtl, slidesGrid, enabled} = swiper;
+            const { params, touches, rtlTranslate: rtl, slidesGrid, enabled } = swiper;
             if (!enabled) return;
             let e = event;
             if (e.originalEvent) e = e.originalEvent;
@@ -3032,10 +3048,10 @@
         }
         function onResize() {
             const swiper = this;
-            const {params, el} = swiper;
+            const { params, el } = swiper;
             if (el && 0 === el.offsetWidth) return;
             if (params.breakpoints) swiper.setBreakpoint();
-            const {allowSlideNext, allowSlidePrev, snapGrid} = swiper;
+            const { allowSlideNext, allowSlidePrev, snapGrid } = swiper;
             swiper.allowSlideNext = true;
             swiper.allowSlidePrev = true;
             swiper.updateSize();
@@ -3060,7 +3076,7 @@
         }
         function onScroll() {
             const swiper = this;
-            const {wrapperEl, rtlTranslate, enabled} = swiper;
+            const { wrapperEl, rtlTranslate, enabled } = swiper;
             if (!enabled) return;
             swiper.previousTranslate = swiper.translate;
             if (swiper.isHorizontal()) swiper.translate = -wrapperEl.scrollLeft; else swiper.translate = -wrapperEl.scrollTop;
@@ -3074,10 +3090,10 @@
             swiper.emit("setTranslate", swiper.translate, false);
         }
         let dummyEventAttached = false;
-        function dummyEventListener() {}
+        function dummyEventListener() { }
         const events = (swiper, method) => {
             const document = ssr_window_esm_getDocument();
-            const {params, touchEvents, el, wrapperEl, device, support} = swiper;
+            const { params, touchEvents, el, wrapperEl, device, support } = swiper;
             const capture = !!params.nested;
             const domMethod = "on" === method ? "addEventListener" : "removeEventListener";
             const swiperMethod = method;
@@ -3105,7 +3121,7 @@
         function attachEvents() {
             const swiper = this;
             const document = ssr_window_esm_getDocument();
-            const {params, support} = swiper;
+            const { params, support } = swiper;
             swiper.onTouchStart = onTouchStart.bind(swiper);
             swiper.onTouchMove = onTouchMove.bind(swiper);
             swiper.onTouchEnd = onTouchEnd.bind(swiper);
@@ -3128,7 +3144,7 @@
         const isGridEnabled = (swiper, params) => swiper.grid && params.grid && params.grid.rows > 1;
         function setBreakpoint() {
             const swiper = this;
-            const {activeIndex, initialized, loopedSlides = 0, params, $el} = swiper;
+            const { activeIndex, initialized, loopedSlides = 0, params, $el } = swiper;
             const breakpoints = params.breakpoints;
             if (!breakpoints || breakpoints && 0 === Object.keys(breakpoints).length) return;
             const breakpoint = swiper.getBreakpoint(breakpoints, swiper.params.breakpointsBase, swiper.el);
@@ -3189,7 +3205,7 @@
             }));
             points.sort(((a, b) => parseInt(a.value, 10) - parseInt(b.value, 10)));
             for (let i = 0; i < points.length; i += 1) {
-                const {point, value} = points[i];
+                const { point, value } = points[i];
                 if ("window" === base) {
                     if (window.matchMedia(`(min-width: ${value}px)`).matches) breakpoint = point;
                 } else if (value <= containerEl.clientWidth) breakpoint = point;
@@ -3211,37 +3227,37 @@
         }
         function addClasses() {
             const swiper = this;
-            const {classNames, params, rtl, $el, device, support} = swiper;
-            const suffixes = prepareClasses([ "initialized", params.direction, {
+            const { classNames, params, rtl, $el, device, support } = swiper;
+            const suffixes = prepareClasses(["initialized", params.direction, {
                 "pointer-events": !support.touch
             }, {
-                "free-mode": swiper.params.freeMode && params.freeMode.enabled
-            }, {
-                autoheight: params.autoHeight
-            }, {
-                rtl
-            }, {
-                grid: params.grid && params.grid.rows > 1
-            }, {
-                "grid-column": params.grid && params.grid.rows > 1 && "column" === params.grid.fill
-            }, {
-                android: device.android
-            }, {
-                ios: device.ios
-            }, {
-                "css-mode": params.cssMode
-            }, {
-                centered: params.cssMode && params.centeredSlides
-            }, {
-                "watch-progress": params.watchSlidesProgress
-            } ], params.containerModifierClass);
+                    "free-mode": swiper.params.freeMode && params.freeMode.enabled
+                }, {
+                    autoheight: params.autoHeight
+                }, {
+                    rtl
+                }, {
+                    grid: params.grid && params.grid.rows > 1
+                }, {
+                    "grid-column": params.grid && params.grid.rows > 1 && "column" === params.grid.fill
+                }, {
+                    android: device.android
+                }, {
+                    ios: device.ios
+                }, {
+                    "css-mode": params.cssMode
+                }, {
+                    centered: params.cssMode && params.centeredSlides
+                }, {
+                    "watch-progress": params.watchSlidesProgress
+                }], params.containerModifierClass);
             classNames.push(...suffixes);
-            $el.addClass([ ...classNames ].join(" "));
+            $el.addClass([...classNames].join(" "));
             swiper.emitContainerClasses();
         }
         function removeClasses_removeClasses() {
             const swiper = this;
-            const {$el, classNames} = swiper;
+            const { $el, classNames } = swiper;
             $el.removeClass(classNames.join(" "));
             swiper.emitContainerClasses();
         }
@@ -3287,8 +3303,8 @@
         };
         function checkOverflow() {
             const swiper = this;
-            const {isLocked: wasLocked, params} = swiper;
-            const {slidesOffsetBefore} = params;
+            const { isLocked: wasLocked, params } = swiper;
+            const { slidesOffsetBefore } = params;
             if (slidesOffsetBefore) {
                 const lastSlideIndex = swiper.slides.length - 1;
                 const lastSlideRightEdge = swiper.slidesGrid[lastSlideIndex] + swiper.slidesSizesGrid[lastSlideIndex] + 2 * slidesOffsetBefore;
@@ -3403,7 +3419,7 @@
                     utils_extend(allModulesParams, obj);
                     return;
                 }
-                if ([ "navigation", "pagination", "scrollbar" ].indexOf(moduleParamName) >= 0 && true === params[moduleParamName]) params[moduleParamName] = {
+                if (["navigation", "pagination", "scrollbar"].indexOf(moduleParamName) >= 0 && true === params[moduleParamName]) params[moduleParamName] = {
                     auto: true
                 };
                 if (!(moduleParamName in params && "enabled" in moduleParams)) {
@@ -3440,7 +3456,7 @@
                 let el;
                 let params;
                 for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) args[_key] = arguments[_key];
-                if (1 === args.length && args[0].constructor && "Object" === Object.prototype.toString.call(args[0]).slice(8, -1)) params = args[0]; else [el, params] = args;
+                if (1 === args.length && args[0].constructor && "Object" === Object.prototype.toString.call(args[0]).slice(8, -1)) params = args[0]; else[el, params] = args;
                 if (!params) params = {};
                 params = utils_extend({}, params);
                 if (el && !params.el) params.el = el;
@@ -3463,7 +3479,7 @@
                 swiper.browser = getBrowser();
                 swiper.eventsListeners = {};
                 swiper.eventsAnyListeners = [];
-                swiper.modules = [ ...swiper.__modules__ ];
+                swiper.modules = [...swiper.__modules__];
                 if (params.modules && Array.isArray(params.modules)) swiper.modules.push(...params.modules);
                 const allModulesParams = {};
                 swiper.modules.forEach((mod => {
@@ -3511,8 +3527,8 @@
                     allowSlideNext: swiper.params.allowSlideNext,
                     allowSlidePrev: swiper.params.allowSlidePrev,
                     touchEvents: function touchEvents() {
-                        const touch = [ "touchstart", "touchmove", "touchend", "touchcancel" ];
-                        const desktop = [ "pointerdown", "pointermove", "pointerup" ];
+                        const touch = ["touchstart", "touchmove", "touchend", "touchcancel"];
+                        const desktop = ["pointerdown", "pointermove", "pointerup"];
                         swiper.touchEventsTouch = {
                             start: touch[0],
                             move: touch[1],
@@ -3612,7 +3628,7 @@
                 if (void 0 === view) view = "current";
                 if (void 0 === exact) exact = false;
                 const swiper = this;
-                const {params, slides, slidesGrid, slidesSizesGrid, size: swiperSize, activeIndex} = swiper;
+                const { params, slides, slidesGrid, slidesSizesGrid, size: swiperSize, activeIndex } = swiper;
                 let spv = 1;
                 if (params.centeredSlides) {
                     let slideSize = slides[activeIndex].swiperSlideSize;
@@ -3639,7 +3655,7 @@
             update() {
                 const swiper = this;
                 if (!swiper || swiper.destroyed) return;
-                const {snapGrid, params} = swiper;
+                const { snapGrid, params } = swiper;
                 if (params.breakpoints) swiper.setBreakpoint();
                 swiper.updateSize();
                 swiper.updateSlides();
@@ -3744,7 +3760,7 @@
                 if (void 0 === deleteInstance) deleteInstance = true;
                 if (void 0 === cleanStyles) cleanStyles = true;
                 const swiper = this;
-                const {params, $el, $wrapperEl, slides} = swiper;
+                const { params, $el, $wrapperEl, slides } = swiper;
                 if ("undefined" === typeof swiper.params || swiper.destroyed) return null;
                 swiper.emit("beforeDestroy");
                 swiper.initialized = false;
@@ -3754,7 +3770,7 @@
                     swiper.removeClasses();
                     $el.removeAttr("style");
                     $wrapperEl.removeAttr("style");
-                    if (slides && slides.length) slides.removeClass([ params.slideVisibleClass, params.slideActiveClass, params.slideNextClass, params.slidePrevClass ].join(" ")).removeAttr("style").removeAttr("data-swiper-slide-index");
+                    if (slides && slides.length) slides.removeClass([params.slideVisibleClass, params.slideActiveClass, params.slideNextClass, params.slidePrevClass].join(" ")).removeAttr("style").removeAttr("data-swiper-slide-index");
                 }
                 swiper.emit("destroy");
                 Object.keys(swiper.eventsListeners).forEach((eventName => {
@@ -3795,7 +3811,7 @@
                 core_Swiper.prototype[protoMethod] = prototypes[prototypeGroup][protoMethod];
             }));
         }));
-        core_Swiper.use([ Resize, Observer ]);
+        core_Swiper.use([Resize, Observer]);
         const core = core_Swiper;
         function create_element_if_not_defined_createElementIfNotDefined(swiper, originalParams, params, checkProps) {
             const document = ssr_window_esm_getDocument();
@@ -3814,7 +3830,7 @@
             return params;
         }
         function Navigation(_ref) {
-            let {swiper, extendParams, on, emit} = _ref;
+            let { swiper, extendParams, on, emit } = _ref;
             extendParams({
                 navigation: {
                     nextEl: null,
@@ -3849,7 +3865,7 @@
             }
             function update() {
                 if (swiper.params.loop) return;
-                const {$nextEl, $prevEl} = swiper.navigation;
+                const { $nextEl, $prevEl } = swiper.navigation;
                 toggleEl($prevEl, swiper.isBeginning && !swiper.params.rewind);
                 toggleEl($nextEl, swiper.isEnd && !swiper.params.rewind);
             }
@@ -3886,7 +3902,7 @@
                 }
             }
             function destroy() {
-                const {$nextEl, $prevEl} = swiper.navigation;
+                const { $nextEl, $prevEl } = swiper.navigation;
                 if ($nextEl && $nextEl.length) {
                     $nextEl.off("click", onNextClick);
                     $nextEl.removeClass(swiper.params.navigation.disabledClass);
@@ -3907,12 +3923,12 @@
                 destroy();
             }));
             on("enable disable", (() => {
-                const {$nextEl, $prevEl} = swiper.navigation;
+                const { $nextEl, $prevEl } = swiper.navigation;
                 if ($nextEl) $nextEl[swiper.enabled ? "removeClass" : "addClass"](swiper.params.navigation.lockClass);
                 if ($prevEl) $prevEl[swiper.enabled ? "removeClass" : "addClass"](swiper.params.navigation.lockClass);
             }));
             on("click", ((_s, e) => {
-                const {$nextEl, $prevEl} = swiper.navigation;
+                const { $nextEl, $prevEl } = swiper.navigation;
                 const targetEl = e.target;
                 if (swiper.params.navigation.hideOnClick && !dom(targetEl).is($prevEl) && !dom(targetEl).is($nextEl)) {
                     if (swiper.pagination && swiper.params.pagination && swiper.params.pagination.clickable && (swiper.pagination.el === targetEl || swiper.pagination.el.contains(targetEl))) return;
@@ -3934,7 +3950,7 @@
             return `.${classes.trim().replace(/([\.:!\/])/g, "\\$1").replace(/ /g, ".")}`;
         }
         function Pagination(_ref) {
-            let {swiper, extendParams, on, emit} = _ref;
+            let { swiper, extendParams, on, emit } = _ref;
             const pfx = "swiper-pagination";
             extendParams({
                 pagination: {
@@ -3977,7 +3993,7 @@
                 return !swiper.params.pagination.el || !swiper.pagination.el || !swiper.pagination.$el || 0 === swiper.pagination.$el.length;
             }
             function setSideBullets($bulletEl, position) {
-                const {bulletActiveClass} = swiper.params.pagination;
+                const { bulletActiveClass } = swiper.params.pagination;
                 $bulletEl[position]().addClass(`${bulletActiveClass}-${position}`)[position]().addClass(`${bulletActiveClass}-${position}-${position}`);
             }
             function update() {
@@ -4010,7 +4026,7 @@
                         lastIndex = firstIndex + (Math.min(bullets.length, params.dynamicMainBullets) - 1);
                         midIndex = (lastIndex + firstIndex) / 2;
                     }
-                    bullets.removeClass([ "", "-next", "-next-next", "-prev", "-prev-prev", "-main" ].map((suffix => `${params.bulletActiveClass}${suffix}`)).join(" "));
+                    bullets.removeClass(["", "-next", "-next-next", "-prev", "-prev-prev", "-main"].map((suffix => `${params.bulletActiveClass}${suffix}`)).join(" "));
                     if ($el.length > 1) bullets.each((bullet => {
                         const $bullet = dom(bullet);
                         const bulletIndex = $bullet.index();
@@ -4162,7 +4178,7 @@
                 destroy();
             }));
             on("enable disable", (() => {
-                const {$el} = swiper.pagination;
+                const { $el } = swiper.pagination;
                 if ($el) $el[swiper.enabled ? "removeClass" : "addClass"](swiper.params.pagination.lockClass);
             }));
             on("lock unlock", (() => {
@@ -4170,7 +4186,7 @@
             }));
             on("click", ((_s, e) => {
                 const targetEl = e.target;
-                const {$el} = swiper.pagination;
+                const { $el } = swiper.pagination;
                 if (swiper.params.pagination.el && swiper.params.pagination.hideOnClick && $el.length > 0 && !dom(targetEl).hasClass(swiper.params.pagination.bulletClass)) {
                     if (swiper.navigation && (swiper.navigation.nextEl && targetEl === swiper.navigation.nextEl || swiper.navigation.prevEl && targetEl === swiper.navigation.prevEl)) return;
                     const isHidden = $el.hasClass(swiper.params.pagination.hiddenClass);
@@ -4186,14 +4202,14 @@
             });
         }
         function Parallax(_ref) {
-            let {swiper, extendParams, on} = _ref;
+            let { swiper, extendParams, on } = _ref;
             extendParams({
                 parallax: {
                     enabled: false
                 }
             });
             const setTransform = (el, progress) => {
-                const {rtl} = swiper;
+                const { rtl } = swiper;
                 const $el = dom(el);
                 const rtlFactor = rtl ? -1 : 1;
                 const p = $el.attr("data-swiper-parallax") || "0";
@@ -4223,7 +4239,7 @@
                 }
             };
             const setTranslate = () => {
-                const {$el, slides, progress, snapGrid} = swiper;
+                const { $el, slides, progress, snapGrid } = swiper;
                 $el.children("[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale]").each((el => {
                     setTransform(el, progress);
                 }));
@@ -4236,9 +4252,9 @@
                     }));
                 }));
             };
-            const setTransition = function(duration) {
+            const setTransition = function (duration) {
                 if (void 0 === duration) duration = swiper.params.speed;
-                const {$el} = swiper;
+                const { $el } = swiper;
                 $el.find("[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale]").each((parallaxEl => {
                     const $parallaxEl = dom(parallaxEl);
                     let parallaxDuration = parseInt($parallaxEl.attr("data-swiper-parallax-duration"), 10) || duration;
@@ -4265,7 +4281,7 @@
             }));
         }
         function Autoplay(_ref) {
-            let {swiper, extendParams, on, emit} = _ref;
+            let { swiper, extendParams, on, emit } = _ref;
             let timeout;
             swiper.autoplay = {
                 running: false,
@@ -4347,7 +4363,7 @@
                 if (0 === speed || !swiper.params.autoplay.waitForTransition) {
                     swiper.autoplay.paused = false;
                     run();
-                } else [ "transitionend", "webkitTransitionEnd" ].forEach((event => {
+                } else["transitionend", "webkitTransitionEnd"].forEach((event => {
                     swiper.$wrapperEl[0].addEventListener(event, onTransitionEnd);
                 }));
             }
@@ -4362,7 +4378,7 @@
             function onTransitionEnd(e) {
                 if (!swiper || swiper.destroyed || !swiper.$wrapperEl) return;
                 if (e.target !== swiper.$wrapperEl[0]) return;
-                [ "transitionend", "webkitTransitionEnd" ].forEach((event => {
+                ["transitionend", "webkitTransitionEnd"].forEach((event => {
                     swiper.$wrapperEl[0].removeEventListener(event, onTransitionEnd);
                 }));
                 swiper.autoplay.paused = false;
@@ -4373,7 +4389,7 @@
                     emit("autoplayPause");
                     pause();
                 }
-                [ "transitionend", "webkitTransitionEnd" ].forEach((event => {
+                ["transitionend", "webkitTransitionEnd"].forEach((event => {
                     swiper.$wrapperEl[0].removeEventListener(event, onTransitionEnd);
                 }));
             }
@@ -4426,7 +4442,7 @@
         function initSliders() {
             if (document.querySelector(".swiper")) {
                 new core(".hero-slider", {
-                    modules: [ Navigation, Autoplay, Parallax ],
+                    modules: [Navigation, Autoplay, Parallax],
                     observer: true,
                     observeParents: true,
                     centeredSlides: true,
@@ -4452,7 +4468,7 @@
                     }
                 });
                 new core(".project-slider-1", {
-                    modules: [ Navigation ],
+                    modules: [Navigation],
                     observer: true,
                     observeParents: true,
                     grabCursor: true,
@@ -4471,7 +4487,7 @@
                     }
                 });
                 new core(".project-slider-2", {
-                    modules: [ Navigation ],
+                    modules: [Navigation],
                     observer: true,
                     observeParents: true,
                     grabCursor: true,
@@ -4490,7 +4506,7 @@
                     }
                 });
                 new core(".project-slider-3", {
-                    modules: [ Navigation ],
+                    modules: [Navigation],
                     observer: true,
                     observeParents: true,
                     grabCursor: true,
@@ -4509,7 +4525,7 @@
                     }
                 });
                 new core(".reviews-slider", {
-                    modules: [ Navigation, Pagination ],
+                    modules: [Navigation, Pagination],
                     observer: true,
                     observeParents: true,
                     centeredSlides: true,
@@ -4541,7 +4557,7 @@
                 });
             }
         }
-        window.addEventListener("load", (function(e) {
+        window.addEventListener("load", (function (e) {
             initSliders();
         }));
         class ScrollWatcher {
@@ -4563,7 +4579,7 @@
             scrollWatcherConstructor(items) {
                 if (items.length) {
                     this.scrollWatcherLogging(`Проснулся, слежу за объектами (${items.length})...`);
-                    let uniqParams = uniqArray(Array.from(items).map((function(item) {
+                    let uniqParams = uniqArray(Array.from(items).map((function (item) {
                         return `${item.dataset.watchRoot ? item.dataset.watchRoot : null}|${item.dataset.watchMargin ? item.dataset.watchMargin : "0px"}|${item.dataset.watchThreshold ? item.dataset.watchThreshold : 0}`;
                     })));
                     uniqParams.forEach((uniqParam => {
@@ -4573,7 +4589,7 @@
                             margin: uniqParamArray[1],
                             threshold: uniqParamArray[2]
                         };
-                        let groupItems = Array.from(items).filter((function(item) {
+                        let groupItems = Array.from(items).filter((function (item) {
                             let watchRoot = item.dataset.watchRoot ? item.dataset.watchRoot : null;
                             let watchMargin = item.dataset.watchMargin ? item.dataset.watchMargin : "0px";
                             let watchThreshold = item.dataset.watchThreshold ? item.dataset.watchThreshold : 0;
@@ -4685,7 +4701,7 @@
             const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
             let scrollDirection = 0;
             let timer;
-            document.addEventListener("windowScroll", (function(e) {
+            document.addEventListener("windowScroll", (function (e) {
                 const scrollTop = window.scrollY;
                 clearTimeout(timer);
                 if (scrollTop >= startPoint) {
@@ -4706,7 +4722,7 @@
         setTimeout((() => {
             if (addWindowScrollEvent) {
                 let windowScroll = new Event("windowScroll");
-                window.addEventListener("scroll", (function(e) {
+                window.addEventListener("scroll", (function (e) {
                     document.dispatchEvent(windowScroll);
                 }));
             }
@@ -4731,7 +4747,7 @@ LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
-        var __assign = function() {
+        var __assign = function () {
             __assign = Object.assign || function __assign(t) {
                 for (var s, i = 1, n = arguments.length; i < n; i++) {
                     s = arguments[i];
@@ -4744,8 +4760,8 @@ PERFORMANCE OF THIS SOFTWARE.
         function __spreadArrays() {
             for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
             var r = Array(s), k = 0;
-            for (i = 0; i < il; i++) for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, 
-            k++) r[k] = a[j];
+            for (i = 0; i < il; i++) for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++,
+                k++) r[k] = a[j];
             return r;
         }
         var lGEvents = {
@@ -4852,7 +4868,7 @@ PERFORMANCE OF THIS SOFTWARE.
             }
         };
         function initLgPolyfills() {
-            (function() {
+            (function () {
                 if ("function" === typeof window.CustomEvent) return false;
                 function CustomEvent(event, params) {
                     params = params || {
@@ -4866,37 +4882,37 @@ PERFORMANCE OF THIS SOFTWARE.
                 }
                 window.CustomEvent = CustomEvent;
             })();
-            (function() {
+            (function () {
                 if (!Element.prototype.matches) Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
             })();
         }
-        var lgQuery = function() {
+        var lgQuery = function () {
             function lgQuery(selector) {
-                this.cssVenderPrefixes = [ "TransitionDuration", "TransitionTimingFunction", "Transform", "Transition" ];
+                this.cssVenderPrefixes = ["TransitionDuration", "TransitionTimingFunction", "Transform", "Transition"];
                 this.selector = this._getSelector(selector);
                 this.firstElement = this._getFirstEl();
                 return this;
             }
-            lgQuery.generateUUID = function() {
-                return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (function(c) {
+            lgQuery.generateUUID = function () {
+                return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (function (c) {
                     var r = 16 * Math.random() | 0, v = "x" == c ? r : 3 & r | 8;
                     return v.toString(16);
                 }));
             };
-            lgQuery.prototype._getSelector = function(selector, context) {
+            lgQuery.prototype._getSelector = function (selector, context) {
                 if (void 0 === context) context = document;
                 if ("string" !== typeof selector) return selector;
                 context = context || document;
                 var fl = selector.substring(0, 1);
                 if ("#" === fl) return context.querySelector(selector); else return context.querySelectorAll(selector);
             };
-            lgQuery.prototype._each = function(func) {
+            lgQuery.prototype._each = function (func) {
                 if (!this.selector) return this;
                 if (void 0 !== this.selector.length) [].forEach.call(this.selector, func); else func(this.selector, 0);
                 return this;
             };
-            lgQuery.prototype._setCssVendorPrefix = function(el, cssProperty, value) {
-                var property = cssProperty.replace(/-([a-z])/gi, (function(s, group1) {
+            lgQuery.prototype._setCssVendorPrefix = function (el, cssProperty, value) {
+                var property = cssProperty.replace(/-([a-z])/gi, (function (s, group1) {
                     return group1.toUpperCase();
                 }));
                 if (-1 !== this.cssVenderPrefixes.indexOf(property)) {
@@ -4907,52 +4923,52 @@ PERFORMANCE OF THIS SOFTWARE.
                     el.style["o" + property] = value;
                 } else el.style[property] = value;
             };
-            lgQuery.prototype._getFirstEl = function() {
+            lgQuery.prototype._getFirstEl = function () {
                 if (this.selector && void 0 !== this.selector.length) return this.selector[0]; else return this.selector;
             };
-            lgQuery.prototype.isEventMatched = function(event, eventName) {
+            lgQuery.prototype.isEventMatched = function (event, eventName) {
                 var eventNamespace = eventName.split(".");
-                return event.split(".").filter((function(e) {
+                return event.split(".").filter((function (e) {
                     return e;
-                })).every((function(e) {
+                })).every((function (e) {
                     return -1 !== eventNamespace.indexOf(e);
                 }));
             };
-            lgQuery.prototype.attr = function(attr, value) {
+            lgQuery.prototype.attr = function (attr, value) {
                 if (void 0 === value) {
                     if (!this.firstElement) return "";
                     return this.firstElement.getAttribute(attr);
                 }
-                this._each((function(el) {
+                this._each((function (el) {
                     el.setAttribute(attr, value);
                 }));
                 return this;
             };
-            lgQuery.prototype.find = function(selector) {
+            lgQuery.prototype.find = function (selector) {
                 return $LG(this._getSelector(selector, this.selector));
             };
-            lgQuery.prototype.first = function() {
+            lgQuery.prototype.first = function () {
                 if (this.selector && void 0 !== this.selector.length) return $LG(this.selector[0]); else return $LG(this.selector);
             };
-            lgQuery.prototype.eq = function(index) {
+            lgQuery.prototype.eq = function (index) {
                 return $LG(this.selector[index]);
             };
-            lgQuery.prototype.parent = function() {
+            lgQuery.prototype.parent = function () {
                 return $LG(this.selector.parentElement);
             };
-            lgQuery.prototype.get = function() {
+            lgQuery.prototype.get = function () {
                 return this._getFirstEl();
             };
-            lgQuery.prototype.removeAttr = function(attributes) {
+            lgQuery.prototype.removeAttr = function (attributes) {
                 var attrs = attributes.split(" ");
-                this._each((function(el) {
-                    attrs.forEach((function(attr) {
+                this._each((function (el) {
+                    attrs.forEach((function (attr) {
                         return el.removeAttribute(attr);
                     }));
                 }));
                 return this;
             };
-            lgQuery.prototype.wrap = function(className) {
+            lgQuery.prototype.wrap = function (className) {
                 if (!this.firstElement) return this;
                 var wrapper = document.createElement("div");
                 wrapper.className = className;
@@ -4961,67 +4977,67 @@ PERFORMANCE OF THIS SOFTWARE.
                 wrapper.appendChild(this.firstElement);
                 return this;
             };
-            lgQuery.prototype.addClass = function(classNames) {
+            lgQuery.prototype.addClass = function (classNames) {
                 if (void 0 === classNames) classNames = "";
-                this._each((function(el) {
-                    classNames.split(" ").forEach((function(className) {
+                this._each((function (el) {
+                    classNames.split(" ").forEach((function (className) {
                         if (className) el.classList.add(className);
                     }));
                 }));
                 return this;
             };
-            lgQuery.prototype.removeClass = function(classNames) {
-                this._each((function(el) {
-                    classNames.split(" ").forEach((function(className) {
+            lgQuery.prototype.removeClass = function (classNames) {
+                this._each((function (el) {
+                    classNames.split(" ").forEach((function (className) {
                         if (className) el.classList.remove(className);
                     }));
                 }));
                 return this;
             };
-            lgQuery.prototype.hasClass = function(className) {
+            lgQuery.prototype.hasClass = function (className) {
                 if (!this.firstElement) return false;
                 return this.firstElement.classList.contains(className);
             };
-            lgQuery.prototype.hasAttribute = function(attribute) {
+            lgQuery.prototype.hasAttribute = function (attribute) {
                 if (!this.firstElement) return false;
                 return this.firstElement.hasAttribute(attribute);
             };
-            lgQuery.prototype.toggleClass = function(className) {
+            lgQuery.prototype.toggleClass = function (className) {
                 if (!this.firstElement) return this;
                 if (this.hasClass(className)) this.removeClass(className); else this.addClass(className);
                 return this;
             };
-            lgQuery.prototype.css = function(property, value) {
+            lgQuery.prototype.css = function (property, value) {
                 var _this = this;
-                this._each((function(el) {
+                this._each((function (el) {
                     _this._setCssVendorPrefix(el, property, value);
                 }));
                 return this;
             };
-            lgQuery.prototype.on = function(events, listener) {
+            lgQuery.prototype.on = function (events, listener) {
                 var _this = this;
                 if (!this.selector) return this;
-                events.split(" ").forEach((function(event) {
+                events.split(" ").forEach((function (event) {
                     if (!Array.isArray(lgQuery.eventListeners[event])) lgQuery.eventListeners[event] = [];
                     lgQuery.eventListeners[event].push(listener);
                     _this.selector.addEventListener(event.split(".")[0], listener);
                 }));
                 return this;
             };
-            lgQuery.prototype.once = function(event, listener) {
+            lgQuery.prototype.once = function (event, listener) {
                 var _this = this;
-                this.on(event, (function() {
+                this.on(event, (function () {
                     _this.off(event);
                     listener(event);
                 }));
                 return this;
             };
-            lgQuery.prototype.off = function(event) {
+            lgQuery.prototype.off = function (event) {
                 var _this = this;
                 if (!this.selector) return this;
-                Object.keys(lgQuery.eventListeners).forEach((function(eventName) {
+                Object.keys(lgQuery.eventListeners).forEach((function (eventName) {
                     if (_this.isEventMatched(event, eventName)) {
-                        lgQuery.eventListeners[eventName].forEach((function(listener) {
+                        lgQuery.eventListeners[eventName].forEach((function (listener) {
                             _this.selector.removeEventListener(eventName.split(".")[0], listener);
                         }));
                         lgQuery.eventListeners[eventName] = [];
@@ -5029,7 +5045,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 }));
                 return this;
             };
-            lgQuery.prototype.trigger = function(event, detail) {
+            lgQuery.prototype.trigger = function (event, detail) {
                 if (!this.firstElement) return this;
                 var customEvent = new CustomEvent(event.split(".")[0], {
                     detail: detail || null
@@ -5037,64 +5053,64 @@ PERFORMANCE OF THIS SOFTWARE.
                 this.firstElement.dispatchEvent(customEvent);
                 return this;
             };
-            lgQuery.prototype.load = function(url) {
+            lgQuery.prototype.load = function (url) {
                 var _this = this;
-                fetch(url).then((function(res) {
+                fetch(url).then((function (res) {
                     return res.text();
-                })).then((function(html) {
+                })).then((function (html) {
                     _this.selector.innerHTML = html;
                 }));
                 return this;
             };
-            lgQuery.prototype.html = function(html) {
+            lgQuery.prototype.html = function (html) {
                 if (void 0 === html) {
                     if (!this.firstElement) return "";
                     return this.firstElement.innerHTML;
                 }
-                this._each((function(el) {
+                this._each((function (el) {
                     el.innerHTML = html;
                 }));
                 return this;
             };
-            lgQuery.prototype.append = function(html) {
-                this._each((function(el) {
+            lgQuery.prototype.append = function (html) {
+                this._each((function (el) {
                     if ("string" === typeof html) el.insertAdjacentHTML("beforeend", html); else el.appendChild(html);
                 }));
                 return this;
             };
-            lgQuery.prototype.prepend = function(html) {
-                this._each((function(el) {
+            lgQuery.prototype.prepend = function (html) {
+                this._each((function (el) {
                     el.insertAdjacentHTML("afterbegin", html);
                 }));
                 return this;
             };
-            lgQuery.prototype.remove = function() {
-                this._each((function(el) {
+            lgQuery.prototype.remove = function () {
+                this._each((function (el) {
                     el.parentNode.removeChild(el);
                 }));
                 return this;
             };
-            lgQuery.prototype.empty = function() {
-                this._each((function(el) {
+            lgQuery.prototype.empty = function () {
+                this._each((function (el) {
                     el.innerHTML = "";
                 }));
                 return this;
             };
-            lgQuery.prototype.scrollTop = function(scrollTop) {
+            lgQuery.prototype.scrollTop = function (scrollTop) {
                 if (void 0 !== scrollTop) {
                     document.body.scrollTop = scrollTop;
                     document.documentElement.scrollTop = scrollTop;
                     return this;
                 } else return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
             };
-            lgQuery.prototype.scrollLeft = function(scrollLeft) {
+            lgQuery.prototype.scrollLeft = function (scrollLeft) {
                 if (void 0 !== scrollLeft) {
                     document.body.scrollLeft = scrollLeft;
                     document.documentElement.scrollLeft = scrollLeft;
                     return this;
                 } else return window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0;
             };
-            lgQuery.prototype.offset = function() {
+            lgQuery.prototype.offset = function () {
                 if (!this.firstElement) return {
                     left: 0,
                     top: 0
@@ -5106,15 +5122,15 @@ PERFORMANCE OF THIS SOFTWARE.
                     top: rect.top + this.scrollTop()
                 };
             };
-            lgQuery.prototype.style = function() {
+            lgQuery.prototype.style = function () {
                 if (!this.firstElement) return {};
                 return this.firstElement.currentStyle || window.getComputedStyle(this.firstElement);
             };
-            lgQuery.prototype.width = function() {
+            lgQuery.prototype.width = function () {
                 var style = this.style();
                 return this.firstElement.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
             };
-            lgQuery.prototype.height = function() {
+            lgQuery.prototype.height = function () {
                 var style = this.style();
                 return this.firstElement.clientHeight - parseFloat(style.paddingTop) - parseFloat(style.paddingBottom);
             };
@@ -5125,18 +5141,18 @@ PERFORMANCE OF THIS SOFTWARE.
             initLgPolyfills();
             return new lgQuery(selector);
         }
-        var defaultDynamicOptions = [ "src", "sources", "subHtml", "subHtmlUrl", "html", "video", "poster", "slideName", "responsive", "srcset", "sizes", "iframe", "downloadUrl", "download", "width", "facebookShareUrl", "tweetText", "iframeTitle", "twitterShareUrl", "pinterestShareUrl", "pinterestText", "fbHtml", "disqusIdentifier", "disqusUrl" ];
+        var defaultDynamicOptions = ["src", "sources", "subHtml", "subHtmlUrl", "html", "video", "poster", "slideName", "responsive", "srcset", "sizes", "iframe", "downloadUrl", "download", "width", "facebookShareUrl", "tweetText", "iframeTitle", "twitterShareUrl", "pinterestShareUrl", "pinterestText", "fbHtml", "disqusIdentifier", "disqusUrl"];
         function convertToData(attr) {
             if ("href" === attr) return "src";
             attr = attr.replace("data-", "");
             attr = attr.charAt(0).toLowerCase() + attr.slice(1);
-            attr = attr.replace(/-([a-z])/g, (function(g) {
+            attr = attr.replace(/-([a-z])/g, (function (g) {
                 return g[1].toUpperCase();
             }));
             return attr;
         }
         var utils = {
-            getSize: function(el, container, spacing, defaultLgSize) {
+            getSize: function (el, container, spacing, defaultLgSize) {
                 if (void 0 === spacing) spacing = 0;
                 var LGel = $LG(el);
                 var lgSize = LGel.attr("data-lg-size") || defaultLgSize;
@@ -5167,7 +5183,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     height: height * ratio
                 };
             },
-            getTransform: function(el, container, top, bottom, imageSize) {
+            getTransform: function (el, container, top, bottom, imageSize) {
                 if (!imageSize) return;
                 var LGel = $LG(el).find("img").first();
                 if (!LGel.get()) return;
@@ -5184,20 +5200,20 @@ PERFORMANCE OF THIS SOFTWARE.
                 var transform = "translate3d(" + (x *= -1) + "px, " + (y *= -1) + "px, 0) scale3d(" + scX + ", " + scY + ", 1)";
                 return transform;
             },
-            getIframeMarkup: function(iframeWidth, iframeHeight, iframeMaxWidth, iframeMaxHeight, src, iframeTitle) {
+            getIframeMarkup: function (iframeWidth, iframeHeight, iframeMaxWidth, iframeMaxHeight, src, iframeTitle) {
                 var title = iframeTitle ? 'title="' + iframeTitle + '"' : "";
                 return '<div class="lg-video-cont lg-has-iframe" style="width:' + iframeWidth + "; max-width:" + iframeMaxWidth + "; height: " + iframeHeight + "; max-height:" + iframeMaxHeight + '">\n                    <iframe class="lg-object" frameborder="0" ' + title + ' src="' + src + '"  allowfullscreen="true"></iframe>\n                </div>';
             },
-            getImgMarkup: function(index, src, altAttr, srcset, sizes, sources) {
+            getImgMarkup: function (index, src, altAttr, srcset, sizes, sources) {
                 var srcsetAttr = srcset ? 'srcset="' + srcset + '"' : "";
                 var sizesAttr = sizes ? 'sizes="' + sizes + '"' : "";
                 var imgMarkup = "<img " + altAttr + " " + srcsetAttr + "  " + sizesAttr + ' class="lg-object lg-image" data-index="' + index + '" src="' + src + '" />';
                 var sourceTag = "";
                 if (sources) {
                     var sourceObj = "string" === typeof sources ? JSON.parse(sources) : sources;
-                    sourceTag = sourceObj.map((function(source) {
+                    sourceTag = sourceObj.map((function (source) {
                         var attrs = "";
-                        Object.keys(source).forEach((function(key) {
+                        Object.keys(source).forEach((function (key) {
                             attrs += " " + key + '="' + source[key] + '"';
                         }));
                         return "<source " + attrs + "></source>";
@@ -5205,7 +5221,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 }
                 return "" + sourceTag + imgMarkup;
             },
-            getResponsiveSrc: function(srcItms) {
+            getResponsiveSrc: function (srcItms) {
                 var rsWidth = [];
                 var rsSrc = [];
                 var src = "";
@@ -5222,21 +5238,21 @@ PERFORMANCE OF THIS SOFTWARE.
                 }
                 return src;
             },
-            isImageLoaded: function(img) {
+            isImageLoaded: function (img) {
                 if (!img) return false;
                 if (!img.complete) return false;
                 if (0 === img.naturalWidth) return false;
                 return true;
             },
-            getVideoPosterMarkup: function(_poster, dummyImg, videoContStyle, playVideoString, _isVideo) {
+            getVideoPosterMarkup: function (_poster, dummyImg, videoContStyle, playVideoString, _isVideo) {
                 var videoClass = "";
                 if (_isVideo && _isVideo.youtube) videoClass = "lg-has-youtube"; else if (_isVideo && _isVideo.vimeo) videoClass = "lg-has-vimeo"; else videoClass = "lg-has-html5";
                 return '<div class="lg-video-cont ' + videoClass + '" style="' + videoContStyle + '">\n                <div class="lg-video-play-button">\n                <svg\n                    viewBox="0 0 20 20"\n                    preserveAspectRatio="xMidYMid"\n                    focusable="false"\n                    aria-labelledby="' + playVideoString + '"\n                    role="img"\n                    class="lg-video-play-icon"\n                >\n                    <title>' + playVideoString + '</title>\n                    <polygon class="lg-video-play-icon-inner" points="1,0 20,10 1,20"></polygon>\n                </svg>\n                <svg class="lg-video-play-icon-bg" viewBox="0 0 50 50" focusable="false">\n                    <circle cx="50%" cy="50%" r="20"></circle></svg>\n                <svg class="lg-video-play-icon-circle" viewBox="0 0 50 50" focusable="false">\n                    <circle cx="50%" cy="50%" r="20"></circle>\n                </svg>\n            </div>\n            ' + (dummyImg || "") + '\n            <img class="lg-object lg-video-poster" src="' + _poster + '" />\n        </div>';
             },
-            getDynamicOptions: function(items, extraProps, getCaptionFromTitleOrAlt, exThumbImage) {
+            getDynamicOptions: function (items, extraProps, getCaptionFromTitleOrAlt, exThumbImage) {
                 var dynamicElements = [];
                 var availableDynamicOptions = __spreadArrays(defaultDynamicOptions, extraProps);
-                [].forEach.call(items, (function(item) {
+                [].forEach.call(items, (function (item) {
                     var dynamicEl = {};
                     for (var i = 0; i < item.attributes.length; i++) {
                         var attr = item.attributes[i];
@@ -5258,10 +5274,10 @@ PERFORMANCE OF THIS SOFTWARE.
                 }));
                 return dynamicElements;
             },
-            isMobile: function() {
+            isMobile: function () {
                 return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
             },
-            isVideo: function(src, isHTML5VIdeo, index) {
+            isVideo: function (src, isHTML5VIdeo, index) {
                 if (!src) if (isHTML5VIdeo) return {
                     html5: true
                 }; else {
@@ -5281,7 +5297,7 @@ PERFORMANCE OF THIS SOFTWARE.
             }
         };
         var lgId = 0;
-        var LightGallery = function() {
+        var LightGallery = function () {
             function LightGallery(element, options) {
                 this.lgOpened = false;
                 this.index = 0;
@@ -5310,14 +5326,14 @@ PERFORMANCE OF THIS SOFTWARE.
                 this.validateLicense();
                 return this;
             }
-            LightGallery.prototype.generateSettings = function(options) {
+            LightGallery.prototype.generateSettings = function (options) {
                 this.settings = __assign(__assign({}, lightGalleryCoreSettings), options);
                 if (this.settings.isMobile && "function" === typeof this.settings.isMobile ? this.settings.isMobile() : utils.isMobile()) {
                     var mobileSettings = __assign(__assign({}, this.settings.mobileSettings), this.settings.mobileSettings);
                     this.settings = __assign(__assign({}, this.settings), mobileSettings);
                 }
             };
-            LightGallery.prototype.normalizeSettings = function() {
+            LightGallery.prototype.normalizeSettings = function () {
                 if (this.settings.slideEndAnimation) this.settings.hideControlOnEnd = false;
                 if (!this.settings.closable) this.settings.swipeToClose = false;
                 this.zoomFromOrigin = this.settings.zoomFromOrigin;
@@ -5325,7 +5341,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 if (!this.settings.container) this.settings.container = document.body;
                 this.settings.preload = Math.min(this.settings.preload, this.galleryItems.length);
             };
-            LightGallery.prototype.init = function() {
+            LightGallery.prototype.init = function () {
                 var _this = this;
                 this.addSlideVideoInfo(this.galleryItems);
                 this.buildStructure();
@@ -5333,7 +5349,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     instance: this
                 });
                 if (this.settings.keyPress) this.keyPress();
-                setTimeout((function() {
+                setTimeout((function () {
                     _this.enableDrag();
                     _this.enableSwipe();
                     _this.triggerPosterClick();
@@ -5342,13 +5358,13 @@ PERFORMANCE OF THIS SOFTWARE.
                 if (this.settings.mousewheel) this.mousewheel();
                 if (!this.settings.dynamic) this.openGalleryOnItemClick();
             };
-            LightGallery.prototype.openGalleryOnItemClick = function() {
+            LightGallery.prototype.openGalleryOnItemClick = function () {
                 var _this = this;
-                var _loop_1 = function(index) {
+                var _loop_1 = function (index) {
                     var element = this_1.items[index];
                     var $element = $LG(element);
                     var uuid = lgQuery.generateUUID();
-                    $element.attr("data-lg-id", uuid).on("click.lgcustom-item-" + uuid, (function(e) {
+                    $element.attr("data-lg-id", uuid).on("click.lgcustom-item-" + uuid, (function (e) {
                         e.preventDefault();
                         var currentItemIndex = _this.settings.index || index;
                         _this.openGallery(currentItemIndex, element);
@@ -5357,31 +5373,31 @@ PERFORMANCE OF THIS SOFTWARE.
                 var this_1 = this;
                 for (var index = 0; index < this.items.length; index++) _loop_1(index);
             };
-            LightGallery.prototype.buildModules = function() {
+            LightGallery.prototype.buildModules = function () {
                 var _this = this;
-                this.settings.plugins.forEach((function(plugin) {
+                this.settings.plugins.forEach((function (plugin) {
                     _this.plugins.push(new plugin(_this, $LG));
                 }));
             };
-            LightGallery.prototype.validateLicense = function() {
+            LightGallery.prototype.validateLicense = function () {
                 if (!this.settings.licenseKey) console.error("Please provide a valid license key"); else if ("0000-0000-000-0000" === this.settings.licenseKey) console.warn("lightGallery: " + this.settings.licenseKey + " license key is not valid for production use");
             };
-            LightGallery.prototype.getSlideItem = function(index) {
+            LightGallery.prototype.getSlideItem = function (index) {
                 return $LG(this.getSlideItemId(index));
             };
-            LightGallery.prototype.getSlideItemId = function(index) {
+            LightGallery.prototype.getSlideItemId = function (index) {
                 return "#lg-item-" + this.lgId + "-" + index;
             };
-            LightGallery.prototype.getIdName = function(id) {
+            LightGallery.prototype.getIdName = function (id) {
                 return id + "-" + this.lgId;
             };
-            LightGallery.prototype.getElementById = function(id) {
+            LightGallery.prototype.getElementById = function (id) {
                 return $LG("#" + this.getIdName(id));
             };
-            LightGallery.prototype.manageSingleSlideClassName = function() {
+            LightGallery.prototype.manageSingleSlideClassName = function () {
                 if (this.galleryItems.length < 2) this.outer.addClass("lg-single-item"); else this.outer.removeClass("lg-single-item");
             };
-            LightGallery.prototype.buildStructure = function() {
+            LightGallery.prototype.buildStructure = function () {
                 var _this = this;
                 var container = this.$container && this.$container.get();
                 if (container) return;
@@ -5415,7 +5431,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 this.$inner.css("transition-duration", this.settings.speed + "ms");
                 if (this.settings.download) this.$toolbar.append('<a id="' + this.getIdName("lg-download") + '" target="_blank" rel="noopener" aria-label="' + this.settings.strings["download"] + '" download class="lg-download lg-icon"></a>');
                 this.counter();
-                $LG(window).on("resize.lg.global" + this.lgId + " orientationchange.lg.global" + this.lgId, (function() {
+                $LG(window).on("resize.lg.global" + this.lgId + " orientationchange.lg.global" + this.lgId, (function () {
                     _this.refreshOnResize();
                 }));
                 this.hideBars();
@@ -5423,7 +5439,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 this.toggleMaximize();
                 this.initModules();
             };
-            LightGallery.prototype.refreshOnResize = function() {
+            LightGallery.prototype.refreshOnResize = function () {
                 if (this.lgOpened) {
                     var currentGalleryItem = this.galleryItems[this.index];
                     var __slideVideoInfo = currentGalleryItem.__slideVideoInfo;
@@ -5438,12 +5454,12 @@ PERFORMANCE OF THIS SOFTWARE.
                     this.LGel.trigger(lGEvents.containerResize);
                 }
             };
-            LightGallery.prototype.resizeVideoSlide = function(index, imageSize) {
+            LightGallery.prototype.resizeVideoSlide = function (index, imageSize) {
                 var lgVideoStyle = this.getVideoContStyle(imageSize);
                 var currentSlide = this.getSlideItem(index);
                 currentSlide.find(".lg-video-cont").attr("style", lgVideoStyle);
             };
-            LightGallery.prototype.updateSlides = function(items, index) {
+            LightGallery.prototype.updateSlides = function (items, index) {
                 if (this.index > items.length - 1) this.index = items.length - 1;
                 if (1 === items.length) this.index = 0;
                 if (!items.length) {
@@ -5456,7 +5472,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 this.$inner.empty();
                 this.currentItemsInDom = [];
                 var _index = 0;
-                this.galleryItems.some((function(galleryItem, itemIndex) {
+                this.galleryItems.some((function (galleryItem, itemIndex) {
                     if (galleryItem.src === currentSrc) {
                         _index = itemIndex;
                         return true;
@@ -5470,7 +5486,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 this.updateCurrentCounter(_index);
                 this.LGel.trigger(lGEvents.updateSlides);
             };
-            LightGallery.prototype.getItems = function() {
+            LightGallery.prototype.getItems = function () {
                 this.items = [];
                 if (!this.settings.dynamic) {
                     if ("this" === this.settings.selector) this.items.push(this.el); else if (this.settings.selector) if ("string" === typeof this.settings.selector) if (this.settings.selectWithin) {
@@ -5480,7 +5496,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     return utils.getDynamicOptions(this.items, this.settings.extraProps, this.settings.getCaptionFromTitleOrAlt, this.settings.exThumbImage);
                 } else return this.settings.dynamicEl || [];
             };
-            LightGallery.prototype.openGallery = function(index, element) {
+            LightGallery.prototype.openGallery = function (index, element) {
                 var _this = this;
                 if (void 0 === index) index = this.settings.index;
                 if (this.lgOpened) return;
@@ -5491,7 +5507,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 var itemsToBeInsertedToDom = this.getItemsToBeInsertedToDom(index, index);
                 this.currentItemsInDom = itemsToBeInsertedToDom;
                 var items = "";
-                itemsToBeInsertedToDom.forEach((function(item) {
+                itemsToBeInsertedToDom.forEach((function (item) {
                     items = items + '<div id="' + item + '" class="lg-item"></div>';
                 }));
                 this.$inner.append(items);
@@ -5510,7 +5526,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     this.getSlideItem(index).removeClass("lg-complete");
                 }
                 var timeout = this.settings.zoomFromOrigin ? 100 : this.settings.backdropDuration;
-                setTimeout((function() {
+                setTimeout((function () {
                     _this.outer.addClass("lg-components-open");
                 }), timeout);
                 this.index = index;
@@ -5518,23 +5534,23 @@ PERFORMANCE OF THIS SOFTWARE.
                 this.getSlideItem(index).addClass("lg-current");
                 this.lGalleryOn = false;
                 this.prevScrollTop = $LG(window).scrollTop();
-                setTimeout((function() {
+                setTimeout((function () {
                     if (_this.zoomFromOrigin && transform) {
                         var currentSlide_1 = _this.getSlideItem(index);
                         currentSlide_1.css("transform", transform);
-                        setTimeout((function() {
+                        setTimeout((function () {
                             currentSlide_1.addClass("lg-start-progress lg-start-end-progress").css("transition-duration", _this.settings.startAnimationDuration + "ms");
                             _this.outer.addClass("lg-zoom-from-image");
                         }));
-                        setTimeout((function() {
+                        setTimeout((function () {
                             currentSlide_1.css("transform", "translate3d(0, 0, 0)");
                         }), 100);
                     }
-                    setTimeout((function() {
+                    setTimeout((function () {
                         _this.$backdrop.addClass("in");
                         _this.$container.addClass("lg-show-in");
                     }), 10);
-                    if (!_this.zoomFromOrigin || !transform) setTimeout((function() {
+                    if (!_this.zoomFromOrigin || !transform) setTimeout((function () {
                         _this.outer.addClass("lg-visible");
                     }), _this.settings.backdropDuration);
                     _this.slide(index, false, false, false);
@@ -5542,7 +5558,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 }));
                 if (document.body === this.settings.container) $LG("html").addClass("lg-on");
             };
-            LightGallery.prototype.getMediaContainerPosition = function() {
+            LightGallery.prototype.getMediaContainerPosition = function () {
                 if (this.settings.allowMediaOverlap) return {
                     top: 0,
                     bottom: 0
@@ -5558,20 +5574,20 @@ PERFORMANCE OF THIS SOFTWARE.
                     bottom
                 };
             };
-            LightGallery.prototype.setMediaContainerPosition = function(top, bottom) {
+            LightGallery.prototype.setMediaContainerPosition = function (top, bottom) {
                 if (void 0 === top) top = 0;
                 if (void 0 === bottom) bottom = 0;
                 this.$content.css("top", top + "px").css("bottom", bottom + "px");
             };
-            LightGallery.prototype.hideBars = function() {
+            LightGallery.prototype.hideBars = function () {
                 var _this = this;
-                setTimeout((function() {
+                setTimeout((function () {
                     _this.outer.removeClass("lg-hide-items");
                     if (_this.settings.hideBarsDelay > 0) {
-                        _this.outer.on("mousemove.lg click.lg touchstart.lg", (function() {
+                        _this.outer.on("mousemove.lg click.lg touchstart.lg", (function () {
                             _this.outer.removeClass("lg-hide-items");
                             clearTimeout(_this.hideBarTimeout);
-                            _this.hideBarTimeout = setTimeout((function() {
+                            _this.hideBarTimeout = setTimeout((function () {
                                 _this.outer.addClass("lg-hide-items");
                             }), _this.settings.hideBarsDelay);
                         }));
@@ -5579,22 +5595,22 @@ PERFORMANCE OF THIS SOFTWARE.
                     }
                 }), this.settings.showBarsAfter);
             };
-            LightGallery.prototype.initPictureFill = function($img) {
+            LightGallery.prototype.initPictureFill = function ($img) {
                 if (this.settings.supportLegacyBrowser) try {
                     picturefill({
-                        elements: [ $img.get() ]
+                        elements: [$img.get()]
                     });
                 } catch (e) {
                     console.warn("lightGallery :- If you want srcset or picture tag to be supported for older browser please include picturefil javascript library in your document.");
                 }
             };
-            LightGallery.prototype.counter = function() {
+            LightGallery.prototype.counter = function () {
                 if (this.settings.counter) {
                     var counterHtml = '<div class="lg-counter" role="status" aria-live="polite">\n                <span id="' + this.getIdName("lg-counter-current") + '" class="lg-counter-current">' + (this.index + 1) + ' </span> /\n                <span id="' + this.getIdName("lg-counter-all") + '" class="lg-counter-all">' + this.galleryItems.length + " </span></div>";
                     this.outer.find(this.settings.appendCounterTo).append(counterHtml);
                 }
             };
-            LightGallery.prototype.addHtml = function(index) {
+            LightGallery.prototype.addHtml = function (index) {
                 var subHtml;
                 var subHtmlUrl;
                 if (this.galleryItems[index].subHtmlUrl) subHtmlUrl = this.galleryItems[index].subHtmlUrl; else subHtml = this.galleryItems[index].subHtml;
@@ -5611,7 +5627,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     index
                 });
             };
-            LightGallery.prototype.preload = function(index) {
+            LightGallery.prototype.preload = function (index) {
                 for (var i = 1; i <= this.settings.preload; i++) {
                     if (i >= this.galleryItems.length - index) break;
                     this.loadContent(index + i, false);
@@ -5621,15 +5637,15 @@ PERFORMANCE OF THIS SOFTWARE.
                     this.loadContent(index - j, false);
                 }
             };
-            LightGallery.prototype.getDummyImgStyles = function(imageSize) {
+            LightGallery.prototype.getDummyImgStyles = function (imageSize) {
                 if (!imageSize) return "";
                 return "width:" + imageSize.width + "px;\n                margin-left: -" + imageSize.width / 2 + "px;\n                margin-top: -" + imageSize.height / 2 + "px;\n                height:" + imageSize.height + "px";
             };
-            LightGallery.prototype.getVideoContStyle = function(imageSize) {
+            LightGallery.prototype.getVideoContStyle = function (imageSize) {
                 if (!imageSize) return "";
                 return "width:" + imageSize.width + "px;\n                height:" + imageSize.height + "px";
             };
-            LightGallery.prototype.getDummyImageContent = function($currentSlide, index, alt) {
+            LightGallery.prototype.getDummyImageContent = function ($currentSlide, index, alt) {
                 var $currentItem;
                 if (!this.settings.dynamic) $currentItem = $LG(this.items).eq(index);
                 if ($currentItem) {
@@ -5644,7 +5660,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 }
                 return "";
             };
-            LightGallery.prototype.setImgMarkup = function(src, $currentSlide, index) {
+            LightGallery.prototype.setImgMarkup = function (src, $currentSlide, index) {
                 var currentGalleryItem = this.galleryItems[index];
                 var alt = currentGalleryItem.alt, srcset = currentGalleryItem.srcset, sizes = currentGalleryItem.sizes, sources = currentGalleryItem.sources;
                 var imgContent = "";
@@ -5653,31 +5669,31 @@ PERFORMANCE OF THIS SOFTWARE.
                 var imgMarkup = '<picture class="lg-img-wrap"> ' + imgContent + "</picture>";
                 $currentSlide.prepend(imgMarkup);
             };
-            LightGallery.prototype.onSlideObjectLoad = function($slide, isHTML5VideoWithoutPoster, onLoad, onError) {
+            LightGallery.prototype.onSlideObjectLoad = function ($slide, isHTML5VideoWithoutPoster, onLoad, onError) {
                 var mediaObject = $slide.find(".lg-object").first();
                 if (utils.isImageLoaded(mediaObject.get()) || isHTML5VideoWithoutPoster) onLoad(); else {
-                    mediaObject.on("load.lg error.lg", (function() {
+                    mediaObject.on("load.lg error.lg", (function () {
                         onLoad && onLoad();
                     }));
-                    mediaObject.on("error.lg", (function() {
+                    mediaObject.on("error.lg", (function () {
                         onError && onError();
                     }));
                 }
             };
-            LightGallery.prototype.onLgObjectLoad = function(currentSlide, index, delay, speed, isFirstSlide, isHTML5VideoWithoutPoster) {
+            LightGallery.prototype.onLgObjectLoad = function (currentSlide, index, delay, speed, isFirstSlide, isHTML5VideoWithoutPoster) {
                 var _this = this;
-                this.onSlideObjectLoad(currentSlide, isHTML5VideoWithoutPoster, (function() {
+                this.onSlideObjectLoad(currentSlide, isHTML5VideoWithoutPoster, (function () {
                     _this.triggerSlideItemLoad(currentSlide, index, delay, speed, isFirstSlide);
-                }), (function() {
+                }), (function () {
                     currentSlide.addClass("lg-complete lg-complete_");
                     currentSlide.html('<span class="lg-error-msg">Oops... Failed to load content...</span>');
                 }));
             };
-            LightGallery.prototype.triggerSlideItemLoad = function($currentSlide, index, delay, speed, isFirstSlide) {
+            LightGallery.prototype.triggerSlideItemLoad = function ($currentSlide, index, delay, speed, isFirstSlide) {
                 var _this = this;
                 var currentGalleryItem = this.galleryItems[index];
                 var _speed = isFirstSlide && "video" === this.getSlideType(currentGalleryItem) && !currentGalleryItem.poster ? speed : 0;
-                setTimeout((function() {
+                setTimeout((function () {
                     $currentSlide.addClass("lg-complete lg-complete_");
                     _this.LGel.trigger(lGEvents.slideItemLoad, {
                         index,
@@ -5686,17 +5702,17 @@ PERFORMANCE OF THIS SOFTWARE.
                     });
                 }), _speed);
             };
-            LightGallery.prototype.isFirstSlideWithZoomAnimation = function() {
+            LightGallery.prototype.isFirstSlideWithZoomAnimation = function () {
                 return !!(!this.lGalleryOn && this.zoomFromOrigin && this.currentImageSize);
             };
-            LightGallery.prototype.addSlideVideoInfo = function(items) {
+            LightGallery.prototype.addSlideVideoInfo = function (items) {
                 var _this = this;
-                items.forEach((function(element, index) {
+                items.forEach((function (element, index) {
                     element.__slideVideoInfo = utils.isVideo(element.src, !!element.video, index);
                     if (element.__slideVideoInfo && _this.settings.loadYouTubePoster && !element.poster && element.__slideVideoInfo.youtube) element.poster = "//img.youtube.com/vi/" + element.__slideVideoInfo.youtube[1] + "/maxresdefault.jpg";
                 }));
             };
-            LightGallery.prototype.loadContent = function(index, rec) {
+            LightGallery.prototype.loadContent = function (index, rec) {
                 var _this = this;
                 var currentGalleryItem = this.galleryItems[index];
                 var $currentSlide = $LG(this.getSlideItemId(index));
@@ -5753,10 +5769,10 @@ PERFORMANCE OF THIS SOFTWARE.
                 var _speed = 0;
                 if (delay && !$LG(document.body).hasClass("lg-from-hash")) _speed = delay;
                 if (this.isFirstSlideWithZoomAnimation()) {
-                    setTimeout((function() {
+                    setTimeout((function () {
                         $currentSlide.removeClass("lg-start-end-progress lg-start-progress").removeAttr("style");
                     }), this.settings.startAnimationDuration + 100);
-                    if (!$currentSlide.hasClass("lg-loaded")) setTimeout((function() {
+                    if (!$currentSlide.hasClass("lg-loaded")) setTimeout((function () {
                         if ("image" === _this.getSlideType(currentGalleryItem)) {
                             $currentSlide.find(".lg-img-wrap").append(utils.getImgMarkup(index, src, "", srcset, sizes, currentGalleryItem.sources));
                             if (srcset || sources) {
@@ -5766,9 +5782,9 @@ PERFORMANCE OF THIS SOFTWARE.
                         }
                         if ("image" === _this.getSlideType(currentGalleryItem) || "video" === _this.getSlideType(currentGalleryItem) && poster) {
                             _this.onLgObjectLoad($currentSlide, index, delay, _speed, true, false);
-                            _this.onSlideObjectLoad($currentSlide, !!(videoInfo && videoInfo.html5 && !poster), (function() {
+                            _this.onSlideObjectLoad($currentSlide, !!(videoInfo && videoInfo.html5 && !poster), (function () {
                                 _this.loadContentOnFirstSlideLoad(index, $currentSlide, _speed);
-                            }), (function() {
+                            }), (function () {
                                 _this.loadContentOnFirstSlideLoad(index, $currentSlide, _speed);
                             }));
                         }
@@ -5776,17 +5792,17 @@ PERFORMANCE OF THIS SOFTWARE.
                 }
                 $currentSlide.addClass("lg-loaded");
                 if (!this.isFirstSlideWithZoomAnimation() || "video" === this.getSlideType(currentGalleryItem) && !poster) this.onLgObjectLoad($currentSlide, index, delay, _speed, isFirstSlide, !!(videoInfo && videoInfo.html5 && !poster));
-                if ((!this.zoomFromOrigin || !this.currentImageSize) && $currentSlide.hasClass("lg-complete_") && !this.lGalleryOn) setTimeout((function() {
+                if ((!this.zoomFromOrigin || !this.currentImageSize) && $currentSlide.hasClass("lg-complete_") && !this.lGalleryOn) setTimeout((function () {
                     $currentSlide.addClass("lg-complete");
                 }), this.settings.backdropDuration);
                 this.lGalleryOn = true;
-                if (true === rec) if (!$currentSlide.hasClass("lg-complete_")) $currentSlide.find(".lg-object").first().on("load.lg error.lg", (function() {
+                if (true === rec) if (!$currentSlide.hasClass("lg-complete_")) $currentSlide.find(".lg-object").first().on("load.lg error.lg", (function () {
                     _this.preload(index);
                 })); else this.preload(index);
             };
-            LightGallery.prototype.loadContentOnFirstSlideLoad = function(index, $currentSlide, speed) {
+            LightGallery.prototype.loadContentOnFirstSlideLoad = function (index, $currentSlide, speed) {
                 var _this = this;
-                setTimeout((function() {
+                setTimeout((function () {
                     $currentSlide.find(".lg-dummy-img").remove();
                     $currentSlide.removeClass("lg-first-slide");
                     _this.outer.removeClass("lg-first-slide-loading");
@@ -5794,7 +5810,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     _this.preload(index);
                 }), speed + 300);
             };
-            LightGallery.prototype.getItemsToBeInsertedToDom = function(index, prevIndex, numberOfItems) {
+            LightGallery.prototype.getItemsToBeInsertedToDom = function (index, prevIndex, numberOfItems) {
                 var _this = this;
                 if (void 0 === numberOfItems) numberOfItems = 0;
                 var itemsToBeInsertedToDom = [];
@@ -5802,7 +5818,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 possibleNumberOfItems = Math.min(possibleNumberOfItems, this.galleryItems.length);
                 var prevIndexItem = "lg-item-" + this.lgId + "-" + prevIndex;
                 if (this.galleryItems.length <= 3) {
-                    this.galleryItems.forEach((function(_element, index) {
+                    this.galleryItems.forEach((function (_element, index) {
                         itemsToBeInsertedToDom.push("lg-item-" + _this.lgId + "-" + index);
                     }));
                     return itemsToBeInsertedToDom;
@@ -5820,18 +5836,18 @@ PERFORMANCE OF THIS SOFTWARE.
                 if (-1 === itemsToBeInsertedToDom.indexOf(prevIndexItem)) itemsToBeInsertedToDom.push("lg-item-" + this.lgId + "-" + prevIndex);
                 return itemsToBeInsertedToDom;
             };
-            LightGallery.prototype.organizeSlideItems = function(index, prevIndex) {
+            LightGallery.prototype.organizeSlideItems = function (index, prevIndex) {
                 var _this = this;
                 var itemsToBeInsertedToDom = this.getItemsToBeInsertedToDom(index, prevIndex, this.settings.numberOfSlideItemsInDom);
-                itemsToBeInsertedToDom.forEach((function(item) {
+                itemsToBeInsertedToDom.forEach((function (item) {
                     if (-1 === _this.currentItemsInDom.indexOf(item)) _this.$inner.append('<div id="' + item + '" class="lg-item"></div>');
                 }));
-                this.currentItemsInDom.forEach((function(item) {
+                this.currentItemsInDom.forEach((function (item) {
                     if (-1 === itemsToBeInsertedToDom.indexOf(item)) $LG("#" + item).remove();
                 }));
                 return itemsToBeInsertedToDom;
             };
-            LightGallery.prototype.getPreviousSlideIndex = function() {
+            LightGallery.prototype.getPreviousSlideIndex = function () {
                 var prevIndex = 0;
                 try {
                     var currentItemId = this.outer.find(".lg-current").first().attr("id");
@@ -5841,7 +5857,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 }
                 return prevIndex;
             };
-            LightGallery.prototype.setDownloadValue = function(index) {
+            LightGallery.prototype.setDownloadValue = function (index) {
                 if (this.settings.download) {
                     var currentGalleryItem = this.galleryItems[index];
                     var hideDownloadBtn = false === currentGalleryItem.downloadUrl || "false" === currentGalleryItem.downloadUrl;
@@ -5853,10 +5869,10 @@ PERFORMANCE OF THIS SOFTWARE.
                     }
                 }
             };
-            LightGallery.prototype.makeSlideAnimation = function(direction, currentSlideItem, previousSlideItem) {
+            LightGallery.prototype.makeSlideAnimation = function (direction, currentSlideItem, previousSlideItem) {
                 var _this = this;
                 if (this.lGalleryOn) previousSlideItem.addClass("lg-slide-progress");
-                setTimeout((function() {
+                setTimeout((function () {
                     _this.outer.addClass("lg-no-trans");
                     _this.outer.find(".lg-item").removeClass("lg-prev-slide lg-next-slide");
                     if ("prev" === direction) {
@@ -5866,14 +5882,14 @@ PERFORMANCE OF THIS SOFTWARE.
                         currentSlideItem.addClass("lg-next-slide");
                         previousSlideItem.addClass("lg-prev-slide");
                     }
-                    setTimeout((function() {
+                    setTimeout((function () {
                         _this.outer.find(".lg-item").removeClass("lg-current");
                         currentSlideItem.addClass("lg-current");
                         _this.outer.removeClass("lg-no-trans");
                     }), 50);
                 }), this.lGalleryOn ? this.settings.slideDelay : 0);
             };
-            LightGallery.prototype.slide = function(index, fromTouch, fromThumb, direction) {
+            LightGallery.prototype.slide = function (index, fromTouch, fromThumb, direction) {
                 var _this = this;
                 var prevIndex = this.getPreviousSlideIndex();
                 this.currentItemsInDom = this.organizeSlideItems(index, prevIndex);
@@ -5923,11 +5939,11 @@ PERFORMANCE OF THIS SOFTWARE.
                         if ("prev" === direction) this.getSlideItem(touchNext).addClass("lg-next-slide"); else this.getSlideItem(touchPrev).addClass("lg-prev-slide");
                         currentSlideItem.addClass("lg-current");
                     }
-                    if (!this.lGalleryOn) this.loadContent(index, true); else setTimeout((function() {
+                    if (!this.lGalleryOn) this.loadContent(index, true); else setTimeout((function () {
                         _this.loadContent(index, true);
                         if (".lg-item" !== _this.settings.appendSubHtmlTo) _this.addHtml(index);
                     }), this.settings.speed + 50 + (fromTouch ? 0 : this.settings.slideDelay));
-                    setTimeout((function() {
+                    setTimeout((function () {
                         _this.lgBusy = false;
                         previousSlideItem_1.removeClass("lg-slide-progress");
                         _this.LGel.trigger(lGEvents.afterSlide, {
@@ -5940,16 +5956,16 @@ PERFORMANCE OF THIS SOFTWARE.
                 }
                 this.index = index;
             };
-            LightGallery.prototype.updateCurrentCounter = function(index) {
+            LightGallery.prototype.updateCurrentCounter = function (index) {
                 this.getElementById("lg-counter-current").html(index + 1 + "");
             };
-            LightGallery.prototype.updateCounterTotal = function() {
+            LightGallery.prototype.updateCounterTotal = function () {
                 this.getElementById("lg-counter-all").html(this.galleryItems.length + "");
             };
-            LightGallery.prototype.getSlideType = function(item) {
+            LightGallery.prototype.getSlideType = function (item) {
                 if (item.__slideVideoInfo) return "video"; else if (item.iframe) return "iframe"; else return "image";
             };
-            LightGallery.prototype.touchMove = function(startCoords, endCoords, e) {
+            LightGallery.prototype.touchMove = function (startCoords, endCoords, e) {
                 var distanceX = endCoords.pageX - startCoords.pageX;
                 var distanceY = endCoords.pageY - startCoords.pageY;
                 var allowSwipe = false;
@@ -5981,11 +5997,11 @@ PERFORMANCE OF THIS SOFTWARE.
                     if (Math.abs(distanceY) > 100) this.outer.addClass("lg-hide-items").removeClass("lg-components-open");
                 }
             };
-            LightGallery.prototype.touchEnd = function(endCoords, startCoords, event) {
+            LightGallery.prototype.touchEnd = function (endCoords, startCoords, event) {
                 var _this = this;
                 var distance;
                 if ("lg-slide" !== this.settings.mode) this.outer.addClass("lg-slide");
-                setTimeout((function() {
+                setTimeout((function () {
                     _this.$container.removeClass("lg-dragging-vertical");
                     _this.outer.removeClass("lg-dragging lg-hide-items").addClass("lg-components-open");
                     var triggerClick = true;
@@ -6013,18 +6029,18 @@ PERFORMANCE OF THIS SOFTWARE.
                     }
                     _this.swipeDirection = void 0;
                 }));
-                setTimeout((function() {
+                setTimeout((function () {
                     if (!_this.outer.hasClass("lg-dragging") && "lg-slide" !== _this.settings.mode) _this.outer.removeClass("lg-slide");
                 }), this.settings.speed + 100);
             };
-            LightGallery.prototype.enableSwipe = function() {
+            LightGallery.prototype.enableSwipe = function () {
                 var _this = this;
                 var startCoords = {};
                 var endCoords = {};
                 var isMoved = false;
                 var isSwiping = false;
                 if (this.settings.enableSwipe) {
-                    this.$inner.on("touchstart.lg", (function(e) {
+                    this.$inner.on("touchstart.lg", (function (e) {
                         _this.dragOrSwipeEnabled = true;
                         var $item = _this.getSlideItem(_this.index);
                         if (($LG(e.target).hasClass("lg-item") || $item.get().contains(e.target)) && !_this.outer.hasClass("lg-zoomed") && !_this.lgBusy && 1 === e.targetTouches.length) {
@@ -6037,7 +6053,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             };
                         }
                     }));
-                    this.$inner.on("touchmove.lg", (function(e) {
+                    this.$inner.on("touchmove.lg", (function (e) {
                         if (isSwiping && "swipe" === _this.touchAction && 1 === e.targetTouches.length) {
                             endCoords = {
                                 pageX: e.targetTouches[0].pageX,
@@ -6047,7 +6063,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             isMoved = true;
                         }
                     }));
-                    this.$inner.on("touchend.lg", (function(event) {
+                    this.$inner.on("touchend.lg", (function (event) {
                         if ("swipe" === _this.touchAction) {
                             if (isMoved) {
                                 isMoved = false;
@@ -6062,14 +6078,14 @@ PERFORMANCE OF THIS SOFTWARE.
                     }));
                 }
             };
-            LightGallery.prototype.enableDrag = function() {
+            LightGallery.prototype.enableDrag = function () {
                 var _this = this;
                 var startCoords = {};
                 var endCoords = {};
                 var isDraging = false;
                 var isMoved = false;
                 if (this.settings.enableDrag) {
-                    this.outer.on("mousedown.lg", (function(e) {
+                    this.outer.on("mousedown.lg", (function (e) {
                         _this.dragOrSwipeEnabled = true;
                         var $item = _this.getSlideItem(_this.index);
                         if ($LG(e.target).hasClass("lg-item") || $item.get().contains(e.target)) if (!_this.outer.hasClass("lg-zoomed") && !_this.lgBusy) {
@@ -6088,7 +6104,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             }
                         }
                     }));
-                    $LG(window).on("mousemove.lg.global" + this.lgId, (function(e) {
+                    $LG(window).on("mousemove.lg.global" + this.lgId, (function (e) {
                         if (isDraging && _this.lgOpened) {
                             isMoved = true;
                             endCoords = {
@@ -6099,7 +6115,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             _this.LGel.trigger(lGEvents.dragMove);
                         }
                     }));
-                    $LG(window).on("mouseup.lg.global" + this.lgId, (function(event) {
+                    $LG(window).on("mouseup.lg.global" + this.lgId, (function (event) {
                         if (!_this.lgOpened) return;
                         var target = $LG(event.target);
                         if (isMoved) {
@@ -6114,13 +6130,13 @@ PERFORMANCE OF THIS SOFTWARE.
                     }));
                 }
             };
-            LightGallery.prototype.triggerPosterClick = function() {
+            LightGallery.prototype.triggerPosterClick = function () {
                 var _this = this;
-                this.$inner.on("click.lg", (function(event) {
+                this.$inner.on("click.lg", (function (event) {
                     if (!_this.dragOrSwipeEnabled && _this.isPosterElement($LG(event.target))) _this.LGel.trigger(lGEvents.posterClick);
                 }));
             };
-            LightGallery.prototype.manageSwipeClass = function() {
+            LightGallery.prototype.manageSwipeClass = function () {
                 var _touchNext = this.index + 1;
                 var _touchPrev = this.index - 1;
                 if (this.settings.loop && this.galleryItems.length > 2) if (0 === this.index) _touchPrev = this.galleryItems.length - 1; else if (this.index === this.galleryItems.length - 1) _touchNext = 0;
@@ -6128,7 +6144,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 if (_touchPrev > -1) this.getSlideItem(_touchPrev).addClass("lg-prev-slide");
                 this.getSlideItem(_touchNext).addClass("lg-next-slide");
             };
-            LightGallery.prototype.goToNextSlide = function(fromTouch) {
+            LightGallery.prototype.goToNextSlide = function (fromTouch) {
                 var _this = this;
                 var _loop = this.settings.loop;
                 if (fromTouch && this.galleryItems.length < 3) _loop = false;
@@ -6146,12 +6162,12 @@ PERFORMANCE OF THIS SOFTWARE.
                     this.slide(this.index, !!fromTouch, false, "next");
                 } else if (this.settings.slideEndAnimation && !fromTouch) {
                     this.outer.addClass("lg-right-end");
-                    setTimeout((function() {
+                    setTimeout((function () {
                         _this.outer.removeClass("lg-right-end");
                     }), 400);
                 }
             };
-            LightGallery.prototype.goToPrevSlide = function(fromTouch) {
+            LightGallery.prototype.goToPrevSlide = function (fromTouch) {
                 var _this = this;
                 var _loop = this.settings.loop;
                 if (fromTouch && this.galleryItems.length < 3) _loop = false;
@@ -6171,14 +6187,14 @@ PERFORMANCE OF THIS SOFTWARE.
                     this.slide(this.index, !!fromTouch, false, "prev");
                 } else if (this.settings.slideEndAnimation && !fromTouch) {
                     this.outer.addClass("lg-left-end");
-                    setTimeout((function() {
+                    setTimeout((function () {
                         _this.outer.removeClass("lg-left-end");
                     }), 400);
                 }
             };
-            LightGallery.prototype.keyPress = function() {
+            LightGallery.prototype.keyPress = function () {
                 var _this = this;
-                $LG(window).on("keydown.lg.global" + this.lgId, (function(e) {
+                $LG(window).on("keydown.lg.global" + this.lgId, (function (e) {
                     if (_this.lgOpened && true === _this.settings.escKey && 27 === e.keyCode) {
                         e.preventDefault();
                         if (_this.settings.allowMediaOverlap && _this.outer.hasClass("lg-can-toggle") && _this.outer.hasClass("lg-components-open")) _this.outer.removeClass("lg-components-open"); else _this.closeGallery();
@@ -6195,16 +6211,16 @@ PERFORMANCE OF THIS SOFTWARE.
                     }
                 }));
             };
-            LightGallery.prototype.arrow = function() {
+            LightGallery.prototype.arrow = function () {
                 var _this = this;
-                this.getElementById("lg-prev").on("click.lg", (function() {
+                this.getElementById("lg-prev").on("click.lg", (function () {
                     _this.goToPrevSlide();
                 }));
-                this.getElementById("lg-next").on("click.lg", (function() {
+                this.getElementById("lg-next").on("click.lg", (function () {
                     _this.goToNextSlide();
                 }));
             };
-            LightGallery.prototype.arrowDisable = function(index) {
+            LightGallery.prototype.arrowDisable = function (index) {
                 if (!this.settings.loop && this.settings.hideControlOnEnd) {
                     var $prev = this.getElementById("lg-prev");
                     var $next = this.getElementById("lg-next");
@@ -6212,15 +6228,15 @@ PERFORMANCE OF THIS SOFTWARE.
                     if (0 === index) $prev.attr("disabled", "disabled").addClass("disabled"); else $prev.removeAttr("disabled").removeClass("disabled");
                 }
             };
-            LightGallery.prototype.setTranslate = function($el, xValue, yValue, scaleX, scaleY) {
+            LightGallery.prototype.setTranslate = function ($el, xValue, yValue, scaleX, scaleY) {
                 if (void 0 === scaleX) scaleX = 1;
                 if (void 0 === scaleY) scaleY = 1;
                 $el.css("transform", "translate3d(" + xValue + "px, " + yValue + "px, 0px) scale3d(" + scaleX + ", " + scaleY + ", 1)");
             };
-            LightGallery.prototype.mousewheel = function() {
+            LightGallery.prototype.mousewheel = function () {
                 var _this = this;
                 var lastCall = 0;
-                this.outer.on("wheel.lg", (function(e) {
+                this.outer.on("wheel.lg", (function (e) {
                     if (!e.deltaY || _this.galleryItems.length < 2) return;
                     e.preventDefault();
                     var now = (new Date).getTime();
@@ -6229,49 +6245,49 @@ PERFORMANCE OF THIS SOFTWARE.
                     if (e.deltaY > 0) _this.goToNextSlide(); else if (e.deltaY < 0) _this.goToPrevSlide();
                 }));
             };
-            LightGallery.prototype.isSlideElement = function(target) {
+            LightGallery.prototype.isSlideElement = function (target) {
                 return target.hasClass("lg-outer") || target.hasClass("lg-item") || target.hasClass("lg-img-wrap");
             };
-            LightGallery.prototype.isPosterElement = function(target) {
+            LightGallery.prototype.isPosterElement = function (target) {
                 var playButton = this.getSlideItem(this.index).find(".lg-video-play-button").get();
                 return target.hasClass("lg-video-poster") || target.hasClass("lg-video-play-button") || playButton && playButton.contains(target.get());
             };
-            LightGallery.prototype.toggleMaximize = function() {
+            LightGallery.prototype.toggleMaximize = function () {
                 var _this = this;
-                this.getElementById("lg-maximize").on("click.lg", (function() {
+                this.getElementById("lg-maximize").on("click.lg", (function () {
                     _this.$container.toggleClass("lg-inline");
                     _this.refreshOnResize();
                 }));
             };
-            LightGallery.prototype.invalidateItems = function() {
+            LightGallery.prototype.invalidateItems = function () {
                 for (var index = 0; index < this.items.length; index++) {
                     var element = this.items[index];
                     var $element = $LG(element);
                     $element.off("click.lgcustom-item-" + $element.attr("data-lg-id"));
                 }
             };
-            LightGallery.prototype.manageCloseGallery = function() {
+            LightGallery.prototype.manageCloseGallery = function () {
                 var _this = this;
                 if (!this.settings.closable) return;
                 var mousedown = false;
-                this.getElementById("lg-close").on("click.lg", (function() {
+                this.getElementById("lg-close").on("click.lg", (function () {
                     _this.closeGallery();
                 }));
                 if (this.settings.closeOnTap) {
-                    this.outer.on("mousedown.lg", (function(e) {
+                    this.outer.on("mousedown.lg", (function (e) {
                         var target = $LG(e.target);
                         if (_this.isSlideElement(target)) mousedown = true; else mousedown = false;
                     }));
-                    this.outer.on("mousemove.lg", (function() {
+                    this.outer.on("mousemove.lg", (function () {
                         mousedown = false;
                     }));
-                    this.outer.on("mouseup.lg", (function(e) {
+                    this.outer.on("mouseup.lg", (function (e) {
                         var target = $LG(e.target);
                         if (_this.isSlideElement(target) && mousedown) if (!_this.outer.hasClass("lg-dragging")) _this.closeGallery();
                     }));
                 }
             };
-            LightGallery.prototype.closeGallery = function(force) {
+            LightGallery.prototype.closeGallery = function (force) {
                 var _this = this;
                 if (!this.lgOpened || !this.settings.closable && !force) return 0;
                 this.LGel.trigger(lGEvents.beforeClose);
@@ -6302,7 +6318,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 this.$backdrop.removeClass("in").css("opacity", 0);
                 var removeTimeout = this.zoomFromOrigin && transform ? Math.max(this.settings.startAnimationDuration, this.settings.backdropDuration) : this.settings.backdropDuration;
                 this.$container.removeClass("lg-show-in");
-                setTimeout((function() {
+                setTimeout((function () {
                     if (_this.zoomFromOrigin && transform) _this.outer.removeClass("lg-zoom-from-image");
                     _this.$container.removeClass("lg-show");
                     _this.$backdrop.removeAttr("style").css("transition-duration", _this.settings.backdropDuration + "ms");
@@ -6317,8 +6333,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 }), removeTimeout + 100);
                 return removeTimeout + 100;
             };
-            LightGallery.prototype.initModules = function() {
-                this.plugins.forEach((function(module) {
+            LightGallery.prototype.initModules = function () {
+                this.plugins.forEach((function (module) {
                     try {
                         module.init();
                     } catch (err) {
@@ -6326,8 +6342,8 @@ PERFORMANCE OF THIS SOFTWARE.
                     }
                 }));
             };
-            LightGallery.prototype.destroyModules = function(destroy) {
-                this.plugins.forEach((function(module) {
+            LightGallery.prototype.destroyModules = function (destroy) {
+                this.plugins.forEach((function (module) {
                     try {
                         if (destroy) module.destroy(); else module.closeGallery && module.closeGallery();
                     } catch (err) {
@@ -6335,22 +6351,22 @@ PERFORMANCE OF THIS SOFTWARE.
                     }
                 }));
             };
-            LightGallery.prototype.refresh = function(galleryItems) {
+            LightGallery.prototype.refresh = function (galleryItems) {
                 if (!this.settings.dynamic) this.invalidateItems();
                 if (galleryItems) this.galleryItems = galleryItems; else this.galleryItems = this.getItems();
                 this.updateControls();
                 this.openGalleryOnItemClick();
                 this.LGel.trigger(lGEvents.updateSlides);
             };
-            LightGallery.prototype.updateControls = function() {
+            LightGallery.prototype.updateControls = function () {
                 this.addSlideVideoInfo(this.galleryItems);
                 this.updateCounterTotal();
                 this.manageSingleSlideClassName();
             };
-            LightGallery.prototype.destroy = function() {
+            LightGallery.prototype.destroy = function () {
                 var _this = this;
                 var closeTimeout = this.closeGallery(true);
-                setTimeout((function() {
+                setTimeout((function () {
                     _this.destroyModules(true);
                     if (!_this.settings.dynamic) _this.invalidateItems();
                     $LG(window).off(".lg.global" + _this.lgId);
